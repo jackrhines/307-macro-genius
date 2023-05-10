@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon backend_with_db.js",
     "start": "node backend_with_db.js",
-    "debug": "export DEBUG='express:router'\n"
+    "debug": "export DEBUG='express:router'\n",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",

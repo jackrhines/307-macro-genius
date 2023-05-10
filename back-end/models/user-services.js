@@ -8,14 +8,14 @@ dotenv.config();
 mongoose
   .connect(
     "mongodb+srv://" +
-    process.env.MONGO_USER +
-    ":" +
-    process.env.MONGO_PWD +
-    "@" +
-    process.env.MONGO_CLUSTER +
-    "/" +
-    process.env.MONGO_DB +
-    "?retryWrites=true&w=majority",
+      process.env.MONGO_USER +
+      ":" +
+      process.env.MONGO_PWD +
+      "@" +
+      process.env.MONGO_CLUSTER +
+      "/" +
+      process.env.MONGO_DB +
+      "?retryWrites=true&w=majority",
     // "mongodb://localhost:27017/users",
     {
       useNewUrlParser: true, //useFindAndModify: false,
@@ -33,7 +33,7 @@ async function getUsers(name, job) {
   } else if (job && !name) {
     result = await findUserByJob(job);
   } else if (job && name) {
-    result = await findUserByNameAndJob(name, job)
+    result = await findUserByNameAndJob(name, job);
   }
   return result;
 }
@@ -60,8 +60,8 @@ async function addUser(user) {
 
 async function deleteUserById(id) {
   try {
-    console.log(id)
-    return await userModel.findByIdAndDelete(id)
+    console.log(id);
+    return await userModel.findByIdAndDelete(id);
   } catch (error) {
     console.log(error);
     return false;
@@ -77,7 +77,7 @@ async function findUserByJob(job) {
 }
 
 async function findUserByNameAndJob(name, job) {
-  return await userModel.find({ name: name, job: job})
+  return await userModel.find({ name: name, job: job });
 }
 
 exports.getUsers = getUsers;
