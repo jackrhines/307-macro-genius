@@ -1,4 +1,4 @@
-import react, {useState} from 'react'
+import {useState} from 'react'
 
 function Form(props) {
     const [person, setPerson] = useState(
