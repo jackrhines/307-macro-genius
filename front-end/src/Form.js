@@ -1,27 +1,27 @@
 import {useState} from 'react'
 
 function Form(props) {
-    const [person, setPerson] = useState(
+    const [food, setFood] = useState(
         {
             name: "",
-            job: "",
+            calories: "",
         }
     );
     function handleChange(event) {
         const { name, value } = event.target;
         if (name === "job")
-            setPerson(
-                {name: person['name'], job: value}
+            setFood(
+                {name: food['name'], calories: value}
             );
         else
-            setPerson(
-                {name: value, job: person['job']}
+            setFood(
+                {name: value, calories: food['calories']}
             );
     }
 
     function submitForm() {
-        props.handleSubmit(person);
-        setPerson({name: '', job: ''});
+        props.handleSubmit(food);
+        setFood({name: '', calories: ''});
     }
 
     return (
@@ -31,14 +31,14 @@ function Form(props) {
                 type="text"
                 name="name"
                 id="name"
-                value={person.name}
+                value={food.name}
                 onChange={handleChange} />
-            <label htmlFor="job">Job</label>
+            <label htmlFor="calories">Calories</label>
             <input
                 type="text"
-                name="job"
-                id="job"
-                value={person.job}
+                name="calories"
+                id="calories"
+                value={food.calories}
                 onChange={handleChange} />
             <input type="button" value="Submit" onClick={submitForm} />
         </form>

@@ -6,7 +6,7 @@ function TableHeader()  {
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Job</th>
+        <th>Calories</th>
         <th>Remove</th>
       </tr>
     </thead>
@@ -14,14 +14,14 @@ function TableHeader()  {
 }
 
 function TableBody(props) {
-  const rows = props.characterData.map((row, index) => {
+  const rows = props.foodData.map((row, index) => {
     return (
       <tr key={index}>
         <td>{row._id}</td>
         <td>{row.name}</td>
-        <td>{row.job}</td>
+        <td>{row.calories}</td>
         <td>
-          <button onClick={() => props.removeCharacter(index)}>Delete</button>
+          <button onClick={() => props.removeFood(index)}>Delete</button>
         </td>
       </tr>
     );
@@ -38,7 +38,7 @@ function Table(props) {
     return (
         <table>
             <TableHeader />
-            <TableBody characterData={props.characterData} removeCharacter={props.removeCharacter}/>
+            <TableBody foodData={props.foodData} removeFood={props.removeFood}/>
         </table>
     );
 }
