@@ -15,37 +15,49 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     // Perform login logic here with username and password
     console.log('Username:', username);
     console.log('Password:', password);
-    // Reset form fields
-    setUsername('');
-    setPassword('');
   };
 
   return (
-    <div className="login-page">
-      <h2>Login</h2>
-      <form className="login-form" onSubmit={handleSubmit}>
-        <label htmlFor='username'>Username:</label>
-        <input
-            value={username}
-            onChange={handleUsernameChange}
-            type='username'
-            id='username'
-            name='username'
-            placeholder='Username'
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-            value={password}
-            onChange={handlePasswordChange}
-            type='password'
-            id='password'
-            name='password'
-            placeholder='Password'
-        />
-        <button type="submit">Login</button>
+    <div className="Auth-form-container">
+      <form className="Auth-form" onSubmit={handleSubmit}>
+        <div className="Auth-form-content">
+          <h2 className="Auth-form-title">
+            Login 
+          </h2>
+          <div className="switch-link">
+            Not registered yet?{" "}
+            <span className="link-primary" onClick={null}>
+              Sign Up
+            </span>
+          </div>
+          <div className="form-group">
+            <label>Username</label>
+            <input
+              value={username}
+              onChange={handleUsernameChange}
+              type="username"
+              placeholder='Username'
+              className="form-input"
+            />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              value={password}
+              onChange={handlePasswordChange}
+              type="password"
+              placeholder='Password'
+              className="form-input"
+            />
+          </div>
+          <div className="form-group">
+            <button type="submit" className="btn"> Submit </button>
+          </div>
+        </div>
       </form>
     </div>
   );
