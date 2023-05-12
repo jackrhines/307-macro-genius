@@ -1,0 +1,102 @@
+body{
+    background-color: #26afac
+  }
+  
+  label {
+    font-family: "Inter", Helvetica;
+    display: block;
+    margin-bottom: 1px;
+    margin-left: 10%;
+  }
+  
+  input[type="number"],
+    select {
+        font-family: "Inter", Helvetica;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        margin-bottom: 1px;
+        width: 20%;
+    }
+  
+  
+  input[type="text"],
+  select {
+    font-family: "Inter", Helvetica;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 1px;
+    width: 10%;
+  }
+  
+  select {
+    font-family: "Inter", Helvetica;
+    width: 25%;
+  }
+  
+  button{
+    font-family: "Inter", Helvetica;
+    position: absolute;
+    right: 25%;
+    left: 40%;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  
+  button:hover{
+    font-family: "Inter", Helvetica;
+    background-color: #0062cc;
+  }
+  
+  
+  h1{
+    font-family: "Inter", Helvetica;
+  }
+  
+  h2{
+    font-family: "Inter", Helvetica;
+    margin-left: 5%;
+  }
+  
+  h3{
+    font-family: "Inter", Helvetica;
+  }
+  
+  ul{
+    font-family: "Inter", Helvetica;
+    list-style: none;
+  
+  }
+  a:link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+  
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+  }
