@@ -75,7 +75,11 @@ label {
 }
 
 .btn {
-  display: block;
+  display: inline;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  /* display: block;
   width: 100%;
   margin-left: 0;
   margin-right: auto;
@@ -85,8 +89,7 @@ label {
   background-color: #007bff;
   color: #fff;
   border-radius: 10px;
-  cursor: pointer;
-  justify-self: space-between;
+  cursor: pointer; */
 }
 
 .btn:hover {
