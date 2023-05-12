@@ -178,3 +178,15 @@ a:active {
   font-family: "Inter", Helvetica;
   background-color: #0f5f30;
 }
+
+.App {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
