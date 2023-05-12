@@ -9,7 +9,7 @@ label {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
 }
 
 .Auth-form {
@@ -74,11 +74,12 @@ label {
   border: 1px solid #ccc;
 }
 
-.btn {
+.form-group btn {
   position: absolute;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
+  margin-left: auto;
   /* display: block;
   width: 100%;
   margin-left: 0;
