@@ -75,7 +75,7 @@ label {
 }
 
 .btn {
-  display: inline;
+  position: absolute;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
