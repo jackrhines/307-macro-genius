@@ -1,14 +1,40 @@
-import React from 'react'
-import ReactDOMClient from 'react-dom/client'
-import MyApp from './MyApp'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import CalculatePage from './pages/CalculatePage';
+import LoginPage from './pages/Login';
+import SignUpPage from './pages/Signup';
+import Food from './pages/Food';
 
-const container = document.getElementById('root');
 
-// Create a root
 
-const root = ReactDOMClient.createRoot(container);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LoginPage/>,
+  },
+  {
+    path: "signup",
+    element: <SignUpPage/>,
+  },
+  {
+    path: "calculate",
+    element: <CalculatePage/>,
+  },
+  {
+    path: "foods",
+    element: <Food/>,
+  },
+  
+]);
 
-// Initial render:
 
-root.render(<MyApp />);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <RouterProvider router={router}/>
+  </React.StrictMode>
+);
