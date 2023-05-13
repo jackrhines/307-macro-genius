@@ -41,9 +41,9 @@ select {
 
 button{
     font-family: "Inter", Helvetica;
-    position: absolute;
-    right: 25%;
-    left: 40%;
+    position: relative;
+    
+    left: 43%;
     background-color: #007bff;
     color: #ffffff;
     padding: 10px 20px;
@@ -144,8 +144,8 @@ a:active {
     background-color: rgb(194, 192, 192);
     height: 60px;
     position: absolute;
-    left: 60%;
-    right: 20%;
+    left: 65%;
+    right: 15%;
     bottom: 45%;
     padding: 10px;
     border-radius: 5px;
@@ -155,7 +155,7 @@ a:active {
     font-family: "Inter", Helvetica;
     font-size: 20px;
     font-weight: bold;
-    left: 45px;
+    left: 40px;
     line-height: 15px;
     position: relative;
     white-space: nowrap;

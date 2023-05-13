@@ -2,19 +2,16 @@ const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema(
   {
-    name: {
+    username: {
       type: String,
-      required: true,
-      trim: true,
+      required: [true, "Enter a valid username."],
+      unique: [true, "Username already Exist"],
     },
-    job: {
+
+    password: {
       type: String,
-      required: true,
-      trim: true,
-      validate(value) {
-        if (value.length < 2)
-          throw new Error("Invalid job, must be at least 2 characters.");
-      },
+      required: [true, "Enter a valid password."],
+      unique: false,
     },
   },
   { collection: "users_list" }
