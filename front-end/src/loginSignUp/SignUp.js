@@ -1,12 +1,106 @@
 import React, { useState } from 'react';
-import "./SignUp.css";
+import "./LoginSignUp.css";
+// import axios from 'axios';
 
-function SignUp() {
+const SignUp = (props) => {
+    const [fullName, setFullName] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirm, setPasswordConfirm] = useState("");
 
+    const handleFullNameChange = (event) => {
+        setFullName(event.target.value);
+    };
+
+    const handleUsernameChange = (event) => {
+        setUsername(event.target.value);
+    };
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    };
+
+    const handlePasswordConfirmChange = (event) => {
+        setPasswordConfirm(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (password === passwordConfirm) {
+            // Passwords match, proceed with sign-up logic
+            console.log('Sign up successful!');
+        }  else {
+            // Passwords don't match, display error message
+            setPasswordConfirm(false);
+        }
+
+        // Perform login logic here with username and password
+        console.log('Full Name:', fullName);
+        console.log('Username:', username);
+        console.log('Password:', password);
+    };
+    
     return (
-        <div className="signup-page"></div>
+        <div className="Auth-form-container">
+            <form className="Auth-form" onSubmit={handleSubmit}>
+                <div className="Auth-form-content">
+                    <h2 className="Auth-form-title">
+                        Sign Up 
+                    </h2>
+                    <div className="switch-link">
+                        Already registered?{" "}
+                        <span className="link-primary" onClick={() => props.onFormSwitch('login')}>
+                            Sign In
+                        </span>
+                    </div>
+                    <div className="form-group">
+                        <label>Full Name</label>
+                        <input
+                        value={fullName}
+                        onChange={handleFullNameChange}
+                        type="name"
+                        placeholder='e.g. John Smith'
+                        className="form-input"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Username</label>
+                        <input
+                        value={username}
+                        onChange={handleUsernameChange}
+                        type="username"
+                        placeholder='Username'
+                        className="form-input"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Password</label>
+                        <input
+                        value={password}
+                        onChange={handlePasswordChange}
+                        type="password"
+                        placeholder='Password'
+                        className="form-input"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Confirm Password</label>
+                        <input
+                        value={passwordConfirm}
+                        onChange={handlePasswordConfirmChange}
+                        type="password"
+                        placeholder='Password'
+                        className="form-input"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <button type="submit" className="btn"> CREATE ACCOUNT </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     );
 }
+
+export default SignUp;

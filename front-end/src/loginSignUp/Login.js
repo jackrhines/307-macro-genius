@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './Login.css';
+import './LoginSignUp.css';
+// import axios from 'axios';
 
-const Login = () => {
+const Login = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -30,7 +31,7 @@ const Login = () => {
           </h2>
           <div className="switch-link">
             Not registered yet?{" "}
-            <span className="link-primary" onClick={null}>
+            <span className="link-primary" onClick={() => props.onFormSwitch('signUp')}>
               Sign Up
             </span>
           </div>
@@ -55,7 +56,7 @@ const Login = () => {
             />
           </div>
           <div className="form-group">
-            <button type="submit" className="btn"> Submit </button>
+            <button type="submit" className="btn"> SIGN IN </button>
           </div>
         </div>
       </form>
