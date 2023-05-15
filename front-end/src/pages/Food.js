@@ -28,7 +28,7 @@ function Food() {
 
   async function makePostCall(food){
     try {
-      return await axios.post('http://localhost:8000/users', food);
+      return await axios.post('http://localhost:8000/foods', food);
     }
     catch (error) {
       console.log(error);
