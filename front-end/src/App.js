@@ -14,7 +14,7 @@ function App() {
       weight: 185,
       age: 35,
       activityLevel: 'Very Active',
-      imageUrl: 'https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png', // Replace this with the desired profile image URL
+      imageUrl: 'https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png'
     };
 
     const goals = ['Goal 1', 'Goal 2', 'Goal 3'];
