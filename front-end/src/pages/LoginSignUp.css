@@ -47,10 +47,15 @@ label {
   .switch-link span {
     display: inline-block;
     color: #007bff;
+    text-decoration: none;
   }
   
   .switch-link span:hover {
     text-decoration: underline;
+  }
+
+  .switch-link a[href] {
+    color: #007bff !important; /* Add !important to override other rules */
   }
   
   .form-group {
