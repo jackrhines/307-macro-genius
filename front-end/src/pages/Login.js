@@ -63,10 +63,6 @@ const Login = (props) => {
                 <div className="switch-link">
                   Not registered yet?{" "}
                   <span><a href="/signup">Sign Up</a></span>
-                  {/* <span className="link-primary" onClick={() => props.onFormSwitch('signUp')}>
-                    Sign Up
-                  </span> */}
-                  
                 </div>
                 <div className="form-group">
                   <label>Username</label>
