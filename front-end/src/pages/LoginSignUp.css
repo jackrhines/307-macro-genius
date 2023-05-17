@@ -75,19 +75,13 @@ label {
 }
 
 .btn {
-  font-family: "Inter", Helvetica;
-  position: relative;
-  left: 2%;
-  width: 100%;
-  margin-left: 0;
-  margin-right: auto;
-  padding: 8px;
-  font-size: 16px;
-  text-align: center;
+  /* gap: 10px;
+  margin-top: 15px; */
   background-color: #007bff;
   color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
+  /* padding: 8px 16px; */
+  font-size: 16px;
+  text-align: center;
 }
 
 .btn:hover {
