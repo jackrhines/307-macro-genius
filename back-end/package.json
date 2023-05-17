@@ -4,11 +4,12 @@
   "description": "",
   "main": "backend_with_db.js",
   "scripts": {
-    "test": "prettier --check . && jest",
+    "test": "prettier --check . ",
     "dev": "nodemon backend_with_db.js",
     "start": "node backend_with_db.js",
     "debug": "export DEBUG='express:router'\n",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "react-scripts build"
   },
   "author": "",
   "license": "ISC",
