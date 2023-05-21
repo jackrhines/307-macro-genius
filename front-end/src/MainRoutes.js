@@ -1,0 +1,35 @@
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+import Signup from './pages/Signup';
+import CalculatePage from './pages/CalculatePage';
+import Food from './pages/Food';
+import ProfilePage from './pages/ProfilePage'
+
+import ProtectedRoutes from './ProtectedRoutes';
+
+
+
+const MainRoutes = () => {
+    return (
+        <div>
+            <Routes>
+                <Route path = "/signup" element = {<Signup />} />
+
+                <Route path = "/food" element = {<ProtectedRoutes>
+                    <Food />
+                </ProtectedRoutes>} />
+
+                <Route path = "/calculate" element = {<ProtectedRoutes>
+                    <CalculatePage />
+                </ProtectedRoutes>} />
+
+                <Route path = "/profile" element = {<ProtectedRoutes>
+                    <ProfilePage />
+                </ProtectedRoutes>} />
+                
+            </Routes>
+        </div>
+    )
+}
+
+export default MainRoutes;

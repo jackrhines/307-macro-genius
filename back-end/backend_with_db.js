@@ -1,28 +1,17 @@
 const express = require("express");
 const cors = require("cors");
-// const userServices = require("./models/user-services");
+const userServices = require("./models/user-services");
 const foodServices = require("./models/food-services");
 const User = require("./models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const auth = require("./auth");
 
+
 const app = express();
 const port = 8000;
 
-// Curb Cores Error by adding a header here
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, PATCH, OPTIONS"
-  );
-  next();
-});
+
 
 app.use(cors());
 app.use(express.json());
@@ -32,74 +21,66 @@ app.get("/", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  bcrypt
-    .hash(req.body.password, 10)
-    .then((hashedPassword) => {
-      const hashedUser = new User({
-        username: req.body.username,
-        password: hashedPassword,
+  
+
+  bcrypt.hash(req.body.password, 10).then((hashedPassword) => {
+    const hashedUser = new User({
+      username: req.body.username,
+      password: hashedPassword,
+    });
+    hashedUser.save().then((result) => {
+      res.status(201).send({
+        message: "User Created Successfully",
+        result,
       });
-      hashedUser
-        .save()
-        .then((result) => {
-          res.status(201).send({
-            message: "User Created Successfully",
-            result,
-          });
-        })
-        .catch((error) => {
-          res.status(500).send({
-            message: "Error creating user",
-            error,
-          });
-        });
-    })
-    .catch((e) => {
+    }).catch((error) => {
       res.status(500).send({
-        message: "Password was not hashed successfully",
-        e,
+        message: "Error creating user",
+        error,
       });
     });
+  }).catch((e) => {
+    res.status(500).send({
+      message: "Password was not hashed successfully",
+      e,
+    });
+  });
 });
 
 app.post("/login", (req, res) => {
-  User.findOne({ username: req.body.username })
-    .then((user) => {
-      bcrypt
-        .compare(req.body.password, user.password)
-        .then((passwordCheck) => {
-          if (!passwordCheck) {
-            return res.status(400).send({
-              message: "Passwords does not match",
-            });
-          }
-          const token = jwt.sign(
-            {
-              userId: user._id,
-              userUsername: user.username,
-            },
-            "RANDOM-TOKEN",
-            { expiresIn: "24h" }
-          );
-          res.status(200).send({
-            message: "Login Successful",
-            username: user.username,
-            token,
-          });
-        })
-        .catch((error) => {
-          res.status(400).send({
-            message: "Passwords does not match",
-            error,
-          });
+  User.findOne({ username: req.body.username}).then((user) => {
+    bcrypt.compare(req.body.password, user.password).then((passwordCheck) => {
+      if (!passwordCheck) {
+        return response.status(400).send({
+          message: "Passwords does not match",
+          error,
         });
-    })
-    .catch((e) => {
-      res.status(404).send({
-        message: "username not found",
-        e,
+      }
+      const token = jwt.sign(
+        {
+          userId: user._id,
+          userUsername: user.username,
+        },
+        "RANDOM-TOKEN",
+        {expiresIn: "24h"}
+      );
+      res.status(200).send({
+        message: "Login Successful",
+        username: user.username,
+        token,
+      });
+    }).catch((error) => {
+      res.status(400).send({
+        message: "Passwords does not match",
+        error,
       });
     });
+  }).catch((e) => {
+    res.status(404).send({
+      message: "username not found",
+      e,
+    });
+  });
 });
 
 // free endpoint

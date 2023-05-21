@@ -1,13 +1,34 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import './LoginSignUp.css';
 import axios from 'axios';
 import Cookies from "universal-cookie";
+import MainRoutes from '../MainRoutes';
+
 const cookies = new Cookies();
+
+
 
 const Login = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [login, setLogin] = useState(false);
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    // set configurations for the API call here
+    const configuration = {
+      method: "get",
+      url: "http://localhost:8000/free-endpoint",
+    };
+    axios(configuration)
+      .then((result) => {
+        // assign the message in our result to the message we initialized above
+        setMessage(result.data.message);
+      })
+      .catch((error) => {
+        error = new Error();
+      });
+  }, []);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -16,6 +37,11 @@ const Login = (props) => {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
+
+  const logout = () => {
+    cookies.remove("TOKEN", { path: "/" });
+    window.location.href = "/";
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -34,8 +60,9 @@ const Login = (props) => {
       cookies.set("TOKEN", result.data.token, {
         path:"/",
       });
-      window.location.href = "/auth";
+      window.location.href = "/profile";
     }).catch((error) => {
+      alert("Login failed");
       error = new Error();
     })
     
@@ -47,6 +74,7 @@ const Login = (props) => {
 
   return (
     <div className="body">
+      <MainRoutes/>
             <div className="calculate-page-overlap">
                 <div className="top-logo-text-wrapper">MacroGenius</div>
                 <ul className="calcuate-navigate-menu">
@@ -86,6 +114,8 @@ const Login = (props) => {
                 </div>
                 <div className="form-group">
                   <button type="submit" className="btn"> SIGN IN </button>
+                  <h1></h1>
+                  <button type="submit" className="btn" onClick={() => logout()}> Sign Out </button>
                 </div>
               </div>
             </form>
