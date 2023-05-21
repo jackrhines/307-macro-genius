@@ -68,7 +68,7 @@ const SignUp = (props) => {
                     </h2>
                     <div className="switch-link">
                         Already registered?{" "}
-                        <span><a href="/">Sign In</a></span>
+                        <span><a href="/login">Sign In</a></span>
                     </div>
                     <div className="form-group">
                         <label>Full Name</label>
