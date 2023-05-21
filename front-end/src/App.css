@@ -147,7 +147,7 @@ a:active {
 .home-navigate-menu{
     font-family: "Inter", Helvetica;
     position: absolute;
-    left: 85%;
+    left: 70.8%;
     bottom: 10%;
     background-color: #1ca655;
     color: #ffffff;
@@ -159,6 +159,25 @@ a:active {
 }
 
 .home-navigate-menu:hover{
+    font-family: "Inter", Helvetica;
+    background-color: #0f5f30;
+}
+
+.login-navigate-menu{
+    font-family: "Inter", Helvetica;
+    position: absolute;
+    left: 78%;
+    bottom: 10%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-navigate-menu:hover{
     font-family: "Inter", Helvetica;
     background-color: #0f5f30;
 }

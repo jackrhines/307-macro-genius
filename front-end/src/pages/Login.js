@@ -2,7 +2,6 @@ import React, {useEffect, useState } from 'react';
 import './LoginSignUp.css';
 import axios from 'axios';
 import Cookies from "universal-cookie";
-import MainRoutes from '../MainRoutes';
 
 const cookies = new Cookies();
 
@@ -40,7 +39,7 @@ const Login = (props) => {
 
   const logout = () => {
     cookies.remove("TOKEN", { path: "/" });
-    window.location.href = "/";
+    window.location.href = "/login";
   }
 
   const handleSubmit = (event) => {
@@ -60,7 +59,7 @@ const Login = (props) => {
       cookies.set("TOKEN", result.data.token, {
         path:"/",
       });
-      window.location.href = "/profile";
+      window.location.href = "/food";
     }).catch((error) => {
       alert("Login failed");
       error = new Error();
@@ -74,7 +73,6 @@ const Login = (props) => {
 
   return (
     <div className="body">
-      <MainRoutes/>
             <div className="calculate-page-overlap">
                 <div className="top-logo-text-wrapper">MacroGenius</div>
                 <ul className="calcuate-navigate-menu">

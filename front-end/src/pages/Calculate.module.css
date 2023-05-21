@@ -104,7 +104,7 @@ a:active {
 }
 
 
-.calculate-page-overlap{
+.calculatePageOverlap{
     background-color: #165C60;
     position: absolute;
     top: 0%;
@@ -114,7 +114,7 @@ a:active {
     height: 70px;
 }
 
-.top-logo-text-wrapper{
+.topLogoTextWrapper{
     color: #ffffff;
     font-family: "Inter", Helvetica;
     font-size: 40px;
@@ -128,7 +128,7 @@ a:active {
 
 
 /*grey body*/ 
-.calculate-page-grey-body{
+.calculatePageGreyBody{
     background-color: #d9d9d9;
     height: 600px;
     position: absolute;
@@ -140,8 +140,8 @@ a:active {
     width: 60%;
 }
 
-.calculate-page-result-body{
-    background-color: rgb(194, 192, 192);
+.calculatePageResultBody{
+    background-color: #d9d9d9;
     height: 60px;
     position: absolute;
     left: 65%;
@@ -151,17 +151,17 @@ a:active {
     border-radius: 5px;
 }
 
-.calculate-page-result-text-wrapper{
+.calculatePageResultTextWrapper{
     font-family: "Inter", Helvetica;
     font-size: 20px;
     font-weight: bold;
-    left: 40px;
     line-height: 15px;
     position: relative;
+    right: 80%;
     white-space: nowrap;
 }
 
-.home-navigate-menu{
+.homeNavigateMenu{
     font-family: "Inter", Helvetica;
     position: absolute;
     
@@ -176,7 +176,7 @@ a:active {
     cursor: pointer;
 }
 
-.home-navigate-menu:hover{
+.homeNavigateMenu:hover{
     font-family: "Inter", Helvetica;
     background-color: #0f5f30;
 }

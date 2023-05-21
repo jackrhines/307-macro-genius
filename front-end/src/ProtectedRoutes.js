@@ -11,7 +11,7 @@ const ProtectedRoutes = ({ children }) => {
   if (token) {
     return children;
   } else {
-    return <Navigate to='/' />;
+    return <Navigate to='/login' />;
   }
 
   

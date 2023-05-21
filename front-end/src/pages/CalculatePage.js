@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
-import "./CalculatePage.css"
-
+import styles from "./Calculate.module.css";
 
 
 const CalculatePage = () => {
@@ -48,27 +47,27 @@ const CalculatePage = () => {
 
     
     return (
-        <div className="body">
-            <div className="calculate-page-overlap">
-                <div className="top-logo-text-wrapper">MacroGenius</div>
-                <ul className="calcuate-navigate-menu">
-                    <li><a href="/">Home</a></li>
+        <div className={styles.body}>
+            <div className={styles.calculatePageOverlap}>
+                <div className={styles.topLogoTextWrapper}>MacroGenius</div>
+                <ul className={styles.calculateNavigateMenu}>
+                    <li><a href="/" className={styles.a}>Home</a></li>
                 </ul>
             </div>
-            <div className="calculate-page-grey-body">
-                <h2> Calorie Calculator</h2>
-                <form onSubmit={handleSubmit}>
-                    <label>
+            <div className={styles.calculatePageGreyBody}>
+                <h2 className={styles.h2}> Calorie Calculator</h2>
+                <form className={styles.form} onSubmit={handleSubmit}>
+                    <label className={styles.label}>
                         Age:
                         <br />
-                        <input
+                        <input className={styles.input}
                             type= "number"
                             value= {age}
                             onChange= {event => setAge(event.target.value)}
                         />
                     </label>
                     <br />
-                    <label>
+                    <label className={styles.label}>
                         Sex:
                         <br />
                         <select value= {sex} onChange= {event => setSex(event.target.value)}>
@@ -78,15 +77,15 @@ const CalculatePage = () => {
                         </select>
                     </label>
                     <br />
-                    <label>
+                    <label className={styles.label}>
                         Height (inches):
                         <br />
-                        <input
+                        <input className={styles.input}
                             type= "number"
                             value= {heightInches}
                             onChange= {event => setHeightInches(event.target.value)}
                         />
-                        <input 
+                        <input className={styles.input}
                             type= "text"
                             value= {convertToFeet(heightInches)}
                             readOnly
@@ -94,17 +93,17 @@ const CalculatePage = () => {
                     </label>
                     <br />
                     
-                    <label>
+                    <label className={styles.label}>
                         Weight (lbs):
                         <br />
-                        <input
+                        <input className={styles.input}
                             type= "number"
                             value= {weight}
                             onChange= {event => setWeight(event.target.value)}
                             />
                     </label>
                     <br />
-                    <label>
+                    <label className={styles.label}>
                         Activity Level:
                         <br />
                         <select
@@ -118,13 +117,14 @@ const CalculatePage = () => {
                         </select>
                     </label>
                     <br />
-                    <button type="submit" onClick={handleSubmit}>Calculate</button>
+                    <button className={styles.button}
+                    type="submit" onClick={handleSubmit}>Calculate</button>
                     
                 </form>
 
-                <div className="calculate-page-result-body">
+                <div className={styles.calculatePageResultBody}>
                     {
-                    <div className= "calculate-pagae-result-text-wrapper">
+                    <div className={styles.calculatePageResultTextWrapper}>
                     Your average daily calorie intake: {calorieIntake}
                     </div>
                     }

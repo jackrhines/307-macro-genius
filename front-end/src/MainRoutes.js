@@ -1,5 +1,6 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
+import Login from './pages/Login'
 import Signup from './pages/Signup';
 import CalculatePage from './pages/CalculatePage';
 import Food from './pages/Food';
@@ -13,6 +14,7 @@ const MainRoutes = () => {
     return (
         <div>
             <Routes>
+                <Route path = "/login" element = {<Login />} />
                 <Route path = "/signup" element = {<Signup />} />
 
                 <Route path = "/food" element = {<ProtectedRoutes>

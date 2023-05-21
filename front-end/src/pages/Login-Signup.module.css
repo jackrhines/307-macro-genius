@@ -9,15 +9,15 @@ label {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
   }
+
   
   .Auth-form {
     width: 420px;
     box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
     padding-top: 30px;
     padding-bottom: 20px;
-    padding-right: 10px;
     border-radius: 8px;
     background-color: white;
   }
@@ -30,7 +30,6 @@ label {
   .Auth-form-title {
     text-align: center;
     margin-bottom: 1em;
-    padding-right: 10px;
     font-size: 24px;
     color: rgb(34, 34, 34);
     font-weight: 800;
@@ -48,10 +47,15 @@ label {
   .switch-link span {
     display: inline-block;
     color: #007bff;
+    text-decoration: none;
   }
   
   .switch-link span:hover {
     text-decoration: underline;
+  }
+
+  .switch-link a[href] {
+    color: #007bff !important; /* Add !important to override other rules */
   }
   
   .form-group {
@@ -76,25 +80,7 @@ label {
     border: 1px solid #ccc;
   }
   
-  .form-group btn {
-    position: absolute;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    margin-left: auto;
-    /* display: block;
-    width: 100%;
-    margin-left: 0;
-    margin-right: auto;
-    padding: 8px;
-    font-size: 16px;
-    text-align: center;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer; */
-  }
-  .btn{
+  .btn {
     font-family: "Inter", Helvetica;
     position: relative;
     left: 2%;
@@ -114,43 +100,3 @@ label {
     font-family: "Inter", Helvetica;
     background-color: #0056b3;
   }
-
-  .calcuate-navigate-menu{
-    font-family: "Inter", Helvetica;
-    position: absolute;
-    
-    left: 85%;
-    bottom: 10%;
-    background-color: #1ca655;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.calcuate-navigate-menu:hover{
-    font-family: "Inter", Helvetica;
-    background-color: #0f5f30;
-}
-
-.home-navigate-menu{
-    font-family: "Inter", Helvetica;
-    position: absolute;
-    left: 85%;
-    bottom: 10%;
-    background-color: #1ca655;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.home-navigate-menu:hover{
-    font-family: "Inter", Helvetica;
-    background-color: #0f5f30;
-}
-  
