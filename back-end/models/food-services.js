@@ -5,12 +5,14 @@ mongoose.set("debug", true);
 
 dotenv.config();
 
-async function getFoods(name) {
+async function getFoods(name, user) {
   let result;
-  if (name === undefined) {
+  if (user === undefined) {
     result = await foodModel.find();
+  } else if (name === undefined) {
+    result = await foodModel.find({ user: user });
   } else if (name) {
-    result = await findFoodByName(name);
+    result = await findFoodByName(name, user);
   }
   return result;
 }
@@ -24,16 +26,15 @@ async function findFoodById(id) {
   }
 }
 
-async function findFoodByName(name) {
-  return await foodModel.find({ name: name });
+async function findFoodByName(name, user) {
+  return foodModel.find({ name: name, user: user });
 }
 
 async function addFood(food) {
   try {
-    console.log(food);
+    // console.log(food);
     const foodToAdd = new foodModel(food);
-    const savedFood = await foodToAdd.save();
-    return savedFood;
+    return await foodToAdd.save();
   } catch (error) {
     console.log(error);
     return false;

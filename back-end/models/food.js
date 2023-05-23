@@ -14,6 +14,10 @@ const FoodSchema = new mongoose.Schema({
     //     throw new Error("Invalid calories.  Must be greater than 0.");
     // },
   },
+  user: {
+    type: String,
+    required: true,
+  },
   // date: {
   //   type: Date,
   //   required: false,
