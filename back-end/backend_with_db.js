@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-// const userServices = require("./models/user-services");
+const userServices = require("./models/user-services");
 const foodServices = require("./models/food-services");
 const User = require("./models/user");
 const bcrypt = require("bcrypt");
