@@ -3,20 +3,26 @@ import Table from './Table'
 import Form from './Form'
 import axios from 'axios'
 import "./Food.css"
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 
 function Food() {
   const [foods, setFoods] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null)
 
   useEffect(() => {
-    fetchAll().then( result => {
+    const curUser = cookies.get("USER")
+    setCurrentUser(curUser)
+
+    fetchAll(curUser).then( result => {
       if (result)
         setFoods(result);
     });
   }, [] );
 
-  async function fetchAll(){
+  async function fetchAll(user){
     try {
-      const response = await axios.get('http://localhost:8000/foods');
+      const response = await axios.get('http://localhost:8000/foods?user=' + user);
       return response.data.foods_list;
     }
     catch (error){
@@ -75,7 +81,7 @@ function Food() {
       </div>
       <div className="food-input-grey-body">
         <Table foodData={foods} removeFood={removeOneFood}/>
-        <Form handleSubmit={updateList} />
+        <Form handleSubmit={updateList} user={currentUser}/>
       </div>
     </div>
   );
