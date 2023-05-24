@@ -5,7 +5,7 @@ import Signup from './pages/Signup';
 import CalculatePage from './pages/CalculatePage';
 import Food from './pages/Food';
 import ProfilePage from './pages/ProfilePage'
-
+import Home from './pages/Home'
 import ProtectedRoutes from './ProtectedRoutes';
 
 
@@ -16,6 +16,8 @@ const MainRoutes = () => {
             <Routes>
                 <Route path = "/login" element = {<Login />} />
                 <Route path = "/signup" element = {<Signup />} />
+                <Route path = "/" element = {<Home />} />
+                <Route path = "/Home" element = {<Home />} />
 
                 <Route path = "/food" element = {<ProtectedRoutes>
                     <Food />
@@ -28,7 +30,6 @@ const MainRoutes = () => {
                 <Route path = "/profile" element = {<ProtectedRoutes>
                     <ProfilePage />
                 </ProtectedRoutes>} />
-                
             </Routes>
         </div>
     )
