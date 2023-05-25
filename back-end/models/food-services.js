@@ -17,6 +17,21 @@ async function getFoods(name, user) {
   return result;
 }
 
+async function getDailyFoods(user, start, end) {
+  if (user === undefined || start === undefined || end === undefined) {
+    console.error("input undefined for getDailyFoods");
+    return false;
+  }
+
+  return foodModel.find({
+    user: user,
+    date: {
+      $gte: start,
+      $lte: end,
+    },
+  });
+}
+
 async function findFoodById(id) {
   try {
     return await foodModel.findById(id);
@@ -32,7 +47,6 @@ async function findFoodByName(name, user) {
 
 async function addFood(food) {
   try {
-    // console.log(food);
     const foodToAdd = new foodModel(food);
     return await foodToAdd.save();
   } catch (error) {
@@ -43,7 +57,6 @@ async function addFood(food) {
 
 async function deleteFoodById(id) {
   try {
-    console.log(id);
     return await foodModel.findByIdAndDelete(id);
   } catch (error) {
     console.log(error);
@@ -56,3 +69,4 @@ exports.findFoodByName = findFoodByName;
 exports.findFoodById = findFoodById;
 exports.addFood = addFood;
 exports.deleteFoodById = deleteFoodById;
+exports.getDailyFoods = getDailyFoods;

@@ -4,11 +4,17 @@ import Form from './Form'
 import axios from 'axios'
 import "./Food.css"
 import Cookies from "universal-cookie";
+import endOfDay from 'date-fns/endOfDay';
+import startOfDay from 'date-fns/startOfDay';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
 const cookies = new Cookies();
 
 function Food() {
   const [foods, setFoods] = useState([]);
   const [currentUser, setCurrentUser] = useState(null)
+  const [date, setDate] = useState(Date.now())
 
   useEffect(() => {
     const curUser = cookies.get("USER")
@@ -18,11 +24,15 @@ function Food() {
       if (result)
         setFoods(result);
     });
-  }, [] );
+  }, [date] );
 
   async function fetchAll(user){
     try {
-      const response = await axios.get('http://localhost:8000/foods?user=' + user);
+      const start = startOfDay(date);
+      const end = endOfDay(date);
+
+      const response = await axios.get('http://localhost:8000/foods?user=' + user
+        + '&startDate=' + start.toString() + '&endDate=' + end.toString());
       return response.data.foods_list;
     }
     catch (error){
@@ -61,7 +71,6 @@ function Food() {
 
   function removeOneFood(index) {
     const foodToDelete = foods[index]["_id"]
-    console.log(foods, foods[index])
 
     makeDeleteCall(foodToDelete).then(result => {
       if (result && result.status === 204) {
@@ -80,6 +89,7 @@ function Food() {
         <div className="top-logo-text-wrapper">MacroGenius</div>
       </div>
       <div className="food-input-grey-body">
+        <DatePicker selected={date} onChange={(d) => setDate(d)} />
         <Table foodData={foods} removeFood={removeOneFood}/>
         <Form handleSubmit={updateList} user={currentUser}/>
       </div>

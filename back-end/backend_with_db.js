@@ -99,11 +99,12 @@ app.get("/auth-endpoint", auth, (req, res) => {
 });
 
 app.get("/foods", async (req, res) => {
-  const name = req.query["name"];
   const user = req.query["user"];
+  const start = req.query["startDate"];
+  const end = req.query["endDate"];
 
   try {
-    const result = await foodServices.getFoods(name, user);
+    const result = await foodServices.getDailyFoods(user, start, end);
     res.send({ foods_list: result });
   } catch (error) {
     console.log(error);
