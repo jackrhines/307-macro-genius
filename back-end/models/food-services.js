@@ -47,7 +47,6 @@ async function findFoodByName(name, user) {
 
 async function addFood(food) {
   try {
-    // console.log(food);
     const foodToAdd = new foodModel(food);
     return await foodToAdd.save();
   } catch (error) {
@@ -58,7 +57,6 @@ async function addFood(food) {
 
 async function deleteFoodById(id) {
   try {
-    console.log(id);
     return await foodModel.findByIdAndDelete(id);
   } catch (error) {
     console.log(error);
