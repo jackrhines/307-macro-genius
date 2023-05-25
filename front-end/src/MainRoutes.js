@@ -5,6 +5,7 @@ import Signup from './pages/Signup';
 import CalculatePage from './pages/CalculatePage';
 import Food from './pages/Food';
 import ProfilePage from './pages/ProfilePage'
+import Search from './pages/Search'
 
 import ProtectedRoutes from './ProtectedRoutes';
 
@@ -27,6 +28,10 @@ const MainRoutes = () => {
 
                 <Route path = "/profile" element = {<ProtectedRoutes>
                     <ProfilePage />
+                </ProtectedRoutes>} />
+
+                <Route path = "/search" element = {<ProtectedRoutes>
+                    <Search />
                 </ProtectedRoutes>} />
                 
             </Routes>

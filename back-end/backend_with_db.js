@@ -6,6 +6,7 @@ const User = require("./models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const auth = require("./auth");
+const nutriSearch = require("./Utils/nutriSearch");
 
 const app = express();
 const port = 8000;
@@ -137,6 +138,18 @@ app.delete("/foods/:id", async (req, res) => {
   console.log(result);
   res.status(204).end();
 });
+
+app.post("/search", async (req, res) => {
+  
+  const message = req.body.message
+      
+  
+  const responseJSON = await nutriSearch(message)
+  console.log(responseJSON);
+  if (responseJSON) res.status(201).send({content: responseJSON.content});
+  else res.status(500).end();
+
+})
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

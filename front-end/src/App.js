@@ -23,6 +23,10 @@ const App = () => {
                 <ul className="login-navigate-menu">
                     <li><a href="/login">Login</a></li>
                 </ul>
+
+                <ul className="search-navigate-menu">
+                    <li><a href="/search">Search</a></li>
+                </ul>
                 
             </div>
             
