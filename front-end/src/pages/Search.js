@@ -28,15 +28,17 @@ const Search = () => {
 
     return(
         <div className={styles.body}>
-            <SearchForm handleSubmit={updateList} />
-            <div>
-                {msgs.map((item) => (
-                    <div>
-                        <hr />
-                        <p>Food Info: {item.content}</p>
-                        <hr />
-                    </div>
-                ))}
+            <div className={styles.searchbar}>
+                <SearchForm handleSubmit={updateList} />
+                <div>
+                    {msgs.map((item) => (
+                        <div>
+                            <hr />
+                            <p>Food Info: {item.content}</p>
+                            <hr />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )

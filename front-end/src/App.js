@@ -2,11 +2,19 @@
 import React from 'react';
 import './App.css';
 import MainRoutes from './MainRoutes';
+import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 
 
 
 
 const App = () => {
+
+    const logout = () => {
+        cookies.remove("TOKEN", { path: "/" });
+        window.location.href = "/login";
+    }
 
     
     return (
@@ -26,6 +34,10 @@ const App = () => {
 
                 <ul className="search-navigate-menu">
                     <li><a href="/search">Search</a></li>
+                </ul>
+
+                <ul className="signout-navigate-menu">
+                    <li><a onClick={() => logout()}> Sign Out</a></li>
                 </ul>
                 
             </div>
