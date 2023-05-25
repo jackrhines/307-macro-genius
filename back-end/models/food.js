@@ -18,12 +18,11 @@ const FoodSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // date: {
-  //   type: Date,
-  //   required: false,
-  //   trim: true,
-  //   default: Date.now(),
-  // },
+  date: {
+    type: Date,
+    required: true,
+    default: Date.now(),
+  },
 });
 
 const Food = mongoose.model("Food", FoodSchema);
