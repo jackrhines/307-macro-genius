@@ -8,6 +8,7 @@ import ProfilePage from './pages/ProfilePage'
 import Search from './pages/Search'
 import CreateProfile from './pages/CreateProfile';
 import ProtectedRoutes from './ProtectedRoutes';
+import ProfileCard from './pages/ProfileCard';
 
 
 
@@ -27,7 +28,7 @@ const MainRoutes = () => {
                 </ProtectedRoutes>} />
 
                 <Route path = "/profile" element = {<ProtectedRoutes>
-                    <ProfilePage />
+                    <ProfileCard />
                 </ProtectedRoutes>} />
 
                 <Route path = "/search" element = {<ProtectedRoutes>

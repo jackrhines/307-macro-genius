@@ -72,7 +72,7 @@ const CreateProfile = () => {
           onChange={e => setWeight(e.target.value)} 
         />
         <select value={activityLevel} onChange={e => setActivityLevel(e.target.value)}>
-          <option value="">Activiy Level</option>
+          <option value="">Activity Level</option>
           <option value="notActive">Not Active</option>
           <option value="somewhatActive">Somewhat Active</option>
           <option value="veryActive">Very Active</option>
