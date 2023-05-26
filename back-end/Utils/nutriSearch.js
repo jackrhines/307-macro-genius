@@ -15,15 +15,15 @@ async function nutriSearch(food){
                 ],
             },
             {
-				headers: {
-					'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
-					'Content-Type': 'application/json',
-				  },
+                headers: {
+                    'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+                    'Content-Type': 'application/json',
+                },
             }
         )
 
         
-		return response.data.choices[0].message
+	return response.data.choices[0].message
 
     } catch (error) {
         console.error("Error:", error)
