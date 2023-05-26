@@ -2,15 +2,23 @@
 import React from 'react';
 import './App.css';
 import MainRoutes from './MainRoutes';
+
 import deadlift from "./Images/deadlift.png"
 import macro from "./Images/macro.png"
 import supplement from "./Images/supplement.png"
 import treadmill from "./Images/treadmill.png"
+=======
+import Cookies from "universal-cookie";
 
-
+const cookies = new Cookies();
 
 
 const App = () => {
+
+    const logout = () => {
+        cookies.remove("TOKEN", { path: "/" });
+        window.location.href = "/login";
+    }
 
     
     return (
@@ -26,6 +34,13 @@ const App = () => {
                 </ul>
                 <ul className="login-navigate-menu">
                     <li><a href="/login">Login</a></li>
+                </ul>
+                <ul className="search-navigate-menu">
+                    <li><a href="/search">Search</a></li>
+                </ul>
+
+                <ul className="signout-navigate-menu">
+                    <li><a onClick={() => logout()}> Sign Out</a></li>
                 </ul>
             </div>
             <div className="Img-wrapper">

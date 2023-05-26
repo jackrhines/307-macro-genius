@@ -50,7 +50,6 @@ const CalculatePage = () => {
             <div className={styles.calculatePageOverlap}>
                 <div className={styles.topLogoTextWrapper}>MacroGenius</div>
                 <ul className={styles.calculateNavigateMenu}>
-                    <li><a href="/" className={styles.a}>Home</a></li>
                 </ul>
             </div>
             <div className={styles.calculatePageGreyBody}>

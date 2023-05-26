@@ -9,17 +9,16 @@ const FoodSchema = new mongoose.Schema({
   calories: {
     type: Number,
     required: true,
-    // validate(value) {
-    //   if (value < 0)
-    //     throw new Error("Invalid calories.  Must be greater than 0.");
-    // },
   },
-  // date: {
-  //   type: Date,
-  //   required: false,
-  //   trim: true,
-  //   default: Date.now(),
-  // },
+  user: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    required: true,
+    default: Date.now(),
+  },
 });
 
 const Food = mongoose.model("Food", FoodSchema);

@@ -37,10 +37,6 @@ const Login = (props) => {
     setPassword(event.target.value);
   };
 
-  const logout = () => {
-    cookies.remove("TOKEN", { path: "/" });
-    window.location.href = "/login";
-  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -57,6 +53,9 @@ const Login = (props) => {
       alert("Login success");
       setLogin(true);
       cookies.set("TOKEN", result.data.token, {
+        path:"/",
+      });
+      cookies.set("USER", result.data.username, {
         path:"/",
       });
       window.location.href = "/food";
@@ -112,8 +111,6 @@ const Login = (props) => {
                 </div>
                 <div className="form-group">
                   <button type="submit" className="btn"> SIGN IN </button>
-                  <h1></h1>
-                  <button type="submit" className="btn" onClick={() => logout()}> Sign Out </button>
                 </div>
               </div>
             </form>
