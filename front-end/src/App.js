@@ -26,7 +26,7 @@ const App = () => {
                     <li><a href="/calculate">Calculate</a></li>
                 </ul>
                 <ul className="home-navigate-menu">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/landingPage">Home</a></li>
                 </ul>
                 <ul className="login-navigate-menu">
                     <li><a href="/login">Login</a></li>

@@ -1,0 +1,40 @@
+/* Date */
+.dateWrapper {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    width: 20%;
+    height: 20%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Profile Pic */
+  circle {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 80%;
+    top: 1%;
+    background: #C4C4C4;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  /* Motivational Quote */
+.motivationalQuote label {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    color: black;
+}
