@@ -173,7 +173,7 @@ app.post("/createprofile", async (req, res) => {
 app.get("/userprofile", async (req, res) => {
   try {
     const user = await UserProfile.findOne({
-      userId: "7225a83e-beda-4eea-a968-7221b1005dcf",
+      userId: "480a3cf8-e0a4-48d0-9605-685f6cfa3e88",
     });
     if (!user) {
       res.status(404).send("User not found");
