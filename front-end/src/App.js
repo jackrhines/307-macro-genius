@@ -7,7 +7,6 @@ import deadlift from "./Images/deadlift.png"
 import macro from "./Images/macro.png"
 import supplement from "./Images/supplement.png"
 import treadmill from "./Images/treadmill.png"
-=======
 import Cookies from "universal-cookie";
 
 const cookies = new Cookies();

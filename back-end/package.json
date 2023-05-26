@@ -8,7 +8,8 @@
     "dev": "nodemon backend_with_db.js",
     "start": "node backend_with_db.js",
     "debug": "export DEBUG='express:router'\n",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "author": "",
   "license": "ISC",
