@@ -33,7 +33,9 @@ const App = () => {
                     <li><a href="/login">Login</a></li>
                 </ul>
                 <ul className={`search-navigate-menu ${currentPage === "/landingPage" ? "new-search-navigate-menu" : ""}`}>
-                <ul className="profile-navigate-menu">
+                    <li><a href="/search">Search</a></li>
+                </ul>
+                <ul className={`profile-navigate-menu ${currentPage === "/landingPage" ? "new-profile-navigate-menu" : ""}`}>
                     <li><a href="/profile">Profile</a></li>
                 </ul>
                 <ul className={`signout-navigate-menu ${currentPage === "/landingPage" ? "new-signout-navigate-menu" : ""}`}>

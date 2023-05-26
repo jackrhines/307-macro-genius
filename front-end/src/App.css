@@ -294,10 +294,10 @@ a:active {
     cursor: pointer;
 }
 
-.profile-navigate-menu{
+.new-profile-navigate-menu{
     font-family: "Inter", Helvetica;
     display: inline-block;
-    left: 68%;
+    left: 65%;
     bottom: -800%;
     background-color: #1ca655;
     color: #ffffff;
