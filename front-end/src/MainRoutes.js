@@ -5,9 +5,12 @@ import Signup from './pages/Signup';
 import CalculatePage from './pages/CalculatePage';
 import Food from './pages/Food';
 import ProfilePage from './pages/ProfilePage'
-import Home from './pages/Home'
 import Search from './pages/Search'
+import CreateProfile from './pages/CreateProfile';
+
+import Home from './pages/Home'
 import ProtectedRoutes from './ProtectedRoutes';
+import ProfileCard from './pages/ProfileCard';
 
 
 
@@ -29,8 +32,16 @@ const MainRoutes = () => {
                 </ProtectedRoutes>} />
 
                 <Route path = "/profile" element = {<ProtectedRoutes>
-                    <ProfilePage />
+                    <ProfileCard />
                 </ProtectedRoutes>} />
+
+                <Route path = "/search" element = {<ProtectedRoutes>
+                    <Search />
+                </ProtectedRoutes>} />
+                <Route path = "/createprofile" element = {
+                    <CreateProfile />
+                } />
+                
                 <Route path = "/search" element = {<ProtectedRoutes>
                     <Search />
                 </ProtectedRoutes>} />

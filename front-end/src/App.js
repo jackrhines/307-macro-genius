@@ -2,6 +2,9 @@
 import React from 'react';
 import './App.css';
 import MainRoutes from './MainRoutes';
+import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 
 import deadlift from "./Images/deadlift.png"
 import macro from "./Images/macro.png"
@@ -30,6 +33,9 @@ const App = () => {
                 </ul>
                 <ul className="home-navigate-menu">
                     <li><a href="/">Home</a></li>
+                </ul>
+                <ul className="profile-navigate-menu">
+                    <li><a href="/profile">Profile</a></li>
                 </ul>
                 <ul className="login-navigate-menu">
                     <li><a href="/login">Login</a></li>
