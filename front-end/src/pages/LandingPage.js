@@ -11,24 +11,27 @@ const cookies = new Cookies();
 
 const LandingPage = (props) => {
     // const [date, setDate] = useState(Date.now());
-    // const [currentUser, setCurrentUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState(null);
 
     const current = new Date();
     const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
+    const curUser = cookies.get("USER");
 
     return (
         <div className={styles.body}>
             <div className={styles.profilePicture}>
                 <circle className='profilePicture'/>
             </div>
-            <div className={styles.welcomeMessage}>
-                <label>Welcome, {cookies.get("USERNAME")}!</label>
-            </div>
-            <div className={styles.motivationalQuote}>
-                <label>"The only bad workout is the one that didn't happen."</label>
-            </div>
-            <div className={styles.dateWrapper}>
-                <label>{date}</label>
+            <div className={styles.landingText}>
+                <div className={styles.welcomeMessage}>
+                    <label>Welcome, {curUser}!</label>
+                </div>
+                <div className={styles.motivationalQuote}>
+                    <label>"The only bad workout is the one that didn't happen."</label>
+                </div>
+                <div className={styles.dateWrapper}>
+                    <label>{date}</label>
+                </div>
             </div>
     </div>
     );
