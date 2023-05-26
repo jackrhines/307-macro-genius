@@ -262,3 +262,7 @@ a:active {
 .image{
     flex-grow: 1;
 }
+
+.hide-menu {
+    display: none;
+}
