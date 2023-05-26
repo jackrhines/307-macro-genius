@@ -182,9 +182,59 @@ a:active {
     background-color: #0f5f30;
 }
 
-.profile{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100vh;
+.search-navigate-menu{
+    font-family: "Inter", Helvetica;
+    position: absolute;
+    left: 63%;
+    bottom: 10%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-navigate-menu:hover{
+    font-family: "Inter", Helvetica;
+    background-color: #0f5f30;
+}
+
+.signout-navigate-menu{
+    font-family: "Inter", Helvetica;
+    position: absolute;
+    left: 54.1%;
+    bottom: 10%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signout-navigate-menu:hover{
+    font-family: "Inter", Helvetica;
+    background-color: #0f5f30;
+}
+
+.profile-navigate-menu{
+    font-family: "Inter", Helvetica;
+    position: absolute;
+    left: 63.3%;
+    bottom: 10%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.profile-navigate-menu:hover{
+    font-family: "Inter", Helvetica;
+    background-color: #0f5f30;
 }

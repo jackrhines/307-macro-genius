@@ -6,6 +6,9 @@ const User = require("./models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const auth = require("./auth");
+const nutriSearch = require("./Utils/nutriSearch");
+const UserProfile = require("./models/profile");
+const { v4: uuidv4 } = require("uuid");
 
 const app = express();
 const port = 8000;
@@ -136,6 +139,51 @@ app.delete("/foods/:id", async (req, res) => {
   const result = await foodServices.deleteFoodById(id);
   console.log(result);
   res.status(204).end();
+});
+
+app.post("/search", async (req, res) => {
+  const message = req.body.message;
+
+  const responseJSON = await nutriSearch(message)
+  console.log(responseJSON);
+  if (responseJSON) res.status(201).send({ content: responseJSON.content });
+  else res.status(500).end();
+});
+
+app.post("/createprofile", async (req, res) => {
+  const user = new UserProfile({
+    userId: uuidv4(),
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    age: req.body.age,
+    sex: req.body.sex,
+    height: req.body.height,
+    weight: req.body.weight,
+    activityLevel: req.body.activityLevel,
+  });
+
+  try {
+    await user.save();
+    res.status(201).send(user);
+  } catch (e) {
+    res.status(400).send(e);
+  }
+});
+
+app.get("/userprofile", async (req, res) => {
+  try {
+    const user = await UserProfile.findOne({
+      userId: "7225a83e-beda-4eea-a968-7221b1005dcf",
+    });
+    if (!user) {
+      res.status(404).send("User not found");
+      console.log(user);
+    } else {
+      res.send(user);
+    }
+  } catch (error) {
+    res.status(500).send("Server error");
+  }
 });
 
 app.listen(port, () => {

@@ -47,6 +47,9 @@ const SignUp = (props) => {
                 error = new Error();
             });
             alert("Registered Successfully");
+            window.location.href = "/login";
+
+
         }  else {
             // Passwords don't match, display error message
             setPasswordConfirm(false);
