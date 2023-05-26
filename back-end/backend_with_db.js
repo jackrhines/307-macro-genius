@@ -10,6 +10,7 @@ const nutriSearch = require("./Utils/nutriSearch");
 const UserProfile = require("./models/profile");
 const { v4: uuidv4 } = require("uuid");
 
+
 const app = express();
 const port = 8000;
 
@@ -185,6 +186,7 @@ app.get("/userprofile", async (req, res) => {
     res.status(500).send("Server error");
   }
 });
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

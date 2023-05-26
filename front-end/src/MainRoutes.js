@@ -7,6 +7,8 @@ import Food from './pages/Food';
 import ProfilePage from './pages/ProfilePage'
 import Search from './pages/Search'
 import CreateProfile from './pages/CreateProfile';
+
+import Home from './pages/Home'
 import ProtectedRoutes from './ProtectedRoutes';
 import ProfileCard from './pages/ProfileCard';
 
@@ -18,6 +20,8 @@ const MainRoutes = () => {
             <Routes>
                 <Route path = "/login" element = {<Login />} />
                 <Route path = "/signup" element = {<Signup />} />
+                <Route path = "/" element = {<Home />} />
+                <Route path = "/Home" element = {<Home />} />
 
                 <Route path = "/food" element = {<ProtectedRoutes>
                     <Food />
@@ -34,11 +38,13 @@ const MainRoutes = () => {
                 <Route path = "/search" element = {<ProtectedRoutes>
                     <Search />
                 </ProtectedRoutes>} />
-
                 <Route path = "/createprofile" element = {
                     <CreateProfile />
                 } />
                 
+                <Route path = "/search" element = {<ProtectedRoutes>
+                    <Search />
+                </ProtectedRoutes>} />
             </Routes>
         </div>
     )

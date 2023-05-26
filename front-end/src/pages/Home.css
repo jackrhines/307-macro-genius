@@ -1,0 +1,42 @@
+.quote-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+.quote-wrapper{
+    background-color: #165C60;
+    font-size: 25px;
+    line-height: 50px;
+    position: absolute;
+    white-space: wrap;
+    text-align: center;
+    width: 50%;
+    top: 40%;
+    left: 25%;
+    padding: 40px;
+}
+
+
+
+
+.quote{
+    font-family: "Inter", Helvetica;
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+    font-weight: 200;
+    position: relative;
+}
+
+.author{
+    font-family: "Inter", Helvetica;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+}
+
+
