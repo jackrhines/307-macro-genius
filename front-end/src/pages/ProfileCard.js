@@ -1,23 +1,42 @@
-import React from 'react';
-import './ProfileCard.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const ProfileCard = ({ profile }) => {
-  const { name, height, weight, age, activityLevel, imageUrl } = profile;
+const ProfileCard = () => {
+    const [profile, setProfile] = useState({
+        firstName: '',
+        lastName: '',
+        age: '',
+        sex: '',
+        height: '',
+        weight: '',
+        activityLevel: ''
+    });
 
-  return (
-    <div className="profile-card">
-      <div className="image-container">
-        <img className="profile-image" src={imageUrl} alt="Profile" />
-      </div>
-      <div className="profile-info">
-        <div className="info-item">Name: {name}</div>
-        <div className="info-item">Height: {height} cm</div>
-        <div className="info-item">Weight: {weight} lbs</div>
-        <div className="info-item">Age: {age} years</div>
-        <div className="info-item">Activity Level: {activityLevel}</div>
-      </div>
-    </div>
-  );
+    useEffect(() => {
+        axios.get('http://localhost:8000/userprofile')
+        .then(response => {
+            setProfile(response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }, []); 
+
+    return (
+        <div className="profile-card">
+            <div className="image-container">
+                {}
+            </div>
+            <div className="profile-info">
+                <p className="info-item">{`Name: ${profile.firstName} ${profile.lastName}`}</p>
+                <p className="info-item">{`Age: ${profile.age}`}</p>
+                <p className="info-item">{`Sex: ${profile.sex}`}</p>
+                <p className="info-item">{`Height: ${profile.height}`}</p>
+                <p className="info-item">{`Weight: ${profile.weight}`}</p>
+                <p className="info-item">{`Activity Level: ${profile.activityLevel}`}</p>
+            </div>
+        </div>
+    );
 };
 
 export default ProfileCard;

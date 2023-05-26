@@ -7,10 +7,11 @@ import Food from './pages/Food';
 import ProfilePage from './pages/ProfilePage'
 import Search from './pages/Search'
 import LandingPage from './pages/LandingPage';
+import CreateProfile from './pages/CreateProfile';
 
+import Home from './pages/Home'
 import ProtectedRoutes from './ProtectedRoutes';
-
-
+import ProfileCard from './pages/ProfileCard';
 
 const MainRoutes = () => {
     return (
@@ -18,6 +19,8 @@ const MainRoutes = () => {
             <Routes>
                 <Route path = "/login" element = {<Login />} />
                 <Route path = "/signup" element = {<Signup />} />
+                <Route path = "/" element = {<Home />} />
+                <Route path = "/Home" element = {<Home />} />
 
                 <Route path = "/landingPage" element = {<ProtectedRoutes>
                     <LandingPage />
@@ -32,13 +35,19 @@ const MainRoutes = () => {
                 </ProtectedRoutes>} />
 
                 <Route path = "/profile" element = {<ProtectedRoutes>
-                    <ProfilePage />
+                    <ProfileCard />
                 </ProtectedRoutes>} />
 
                 <Route path = "/search" element = {<ProtectedRoutes>
                     <Search />
                 </ProtectedRoutes>} />
+                <Route path = "/createprofile" element = {
+                    <CreateProfile />
+                } />
                 
+                <Route path = "/search" element = {<ProtectedRoutes>
+                    <Search />
+                </ProtectedRoutes>} />
             </Routes>
         </div>
     )
