@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styles from "./LandingPage.module.css";
-import axios from "axios";
 import Cookies from "universal-cookie";
-import endOfDay from 'date-fns/endOfDay';
-import startOfDay from 'date-fns/startOfDay';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import ProgressBar from './ProgressBar';
 
 const cookies = new Cookies();
 
 const LandingPage = (props) => {
-    // const [date, setDate] = useState(Date.now());
-    const [currentUser, setCurrentUser] = useState(null);
-
     const current = new Date();
     const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
     const curUser = cookies.get("USER");
@@ -33,7 +26,10 @@ const LandingPage = (props) => {
                     <label>{date}</label>
                 </div>
             </div>
-    </div>
+            <div className={styles.progressBar}>
+                <ProgressBar/>
+            </div>
+        </div>
     );
 }
 

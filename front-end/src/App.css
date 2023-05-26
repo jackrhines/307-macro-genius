@@ -226,3 +226,21 @@ a:active {
   align-items: center;
   height: 100vh;
 }
+
+.hide-menu {
+    display: none;
+}
+
+.new-signout-navigate-menu{
+    font-family: "Inter", Helvetica;
+    position: absolute;
+    left: 90%;
+    bottom: 10%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

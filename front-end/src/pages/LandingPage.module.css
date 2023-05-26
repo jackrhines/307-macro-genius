@@ -1,9 +1,9 @@
 /* Profile Pic */
 .profilePicture circle {
     position: absolute;
-    width: 230px;
-    height: 230px;
-    left: 80%;
+    width: 200px;
+    height: 200px;
+    left: 75%;
     top: 1%;
     background: #C4C4C4;
     border-radius: 50%;
