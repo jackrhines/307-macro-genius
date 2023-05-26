@@ -29,6 +29,12 @@ const LandingPage = (props) => {
             <div className={styles.progressBar}>
                 <ProgressBar/>
             </div>
+            <div className="calculate-page-overlap">
+            <ul className="profile-navigate-menu">
+                <li><a href="/">Profile</a></li>
+            </ul>
+
+            </div>
         </div>
     );
 }

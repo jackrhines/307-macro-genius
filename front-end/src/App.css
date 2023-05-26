@@ -244,3 +244,47 @@ a:active {
     font-size: 16px;
     cursor: pointer;
 }
+
+.new-calcuate-navigate-menu{
+    font-family: "Inter", Helvetica;
+    position: absolute;
+    display: inline-block;
+    
+    left: 53%;
+    bottom: -800%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.new-search-navigate-menu{
+    font-family: "Inter", Helvetica;
+    display: inline-block;
+    left: 45%;
+    bottom: -800%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.profile-navigate-menu{
+    font-family: "Inter", Helvetica;
+    display: inline-block;
+    left: 68%;
+    bottom: -800%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

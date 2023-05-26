@@ -22,13 +22,13 @@ const App = () => {
                 <ul className={`home-navigate-menu ${currentPage === "/landingPage" ? "hide-menu" : ""}`}>
                     <li><a href="/landingPage">Home</a></li>
                 </ul>
-                <ul className={`calcuate-navigate-menu ${currentPage === "/landingPage" ? "hide-menu" : ""}`}>
+                <ul className={`calcuate-navigate-menu ${currentPage === "/landingPage" ? "new-calcuate-navigate-menu" : ""}`}>
                     <li><a href="/calculate">Calculate</a></li>
                 </ul>
                 <ul className={`login-navigate-menu ${currentPage === "/landingPage" ? "hide-menu" : ""}`}>
                     <li><a href="/login">Login</a></li>
                 </ul>
-                <ul className={`search-navigate-menu ${currentPage === "/landingPage" ? "hide-menu" : ""}`}>
+                <ul className={`search-navigate-menu ${currentPage === "/landingPage" ? "new-search-navigate-menu" : ""}`}>
                     <li><a href="/search">Search</a></li>
                 </ul>
                 <ul className={`signout-navigate-menu ${currentPage === "/landingPage" ? "new-signout-navigate-menu" : ""}`}>
