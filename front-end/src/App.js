@@ -1,11 +1,6 @@
-
 import React from 'react';
 import './App.css';
 import MainRoutes from './MainRoutes';
-import Cookies from "universal-cookie";
-
-const cookies = new Cookies();
-
 import deadlift from "./Images/deadlift.png"
 import macro from "./Images/macro.png"
 import supplement from "./Images/supplement.png"
