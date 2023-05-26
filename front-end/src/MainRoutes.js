@@ -6,13 +6,12 @@ import CalculatePage from './pages/CalculatePage';
 import Food from './pages/Food';
 import ProfilePage from './pages/ProfilePage'
 import Search from './pages/Search'
+import LandingPage from './pages/LandingPage';
 import CreateProfile from './pages/CreateProfile';
 
 import Home from './pages/Home'
 import ProtectedRoutes from './ProtectedRoutes';
 import ProfileCard from './pages/ProfileCard';
-
-
 
 const MainRoutes = () => {
     return (
@@ -22,6 +21,10 @@ const MainRoutes = () => {
                 <Route path = "/signup" element = {<Signup />} />
                 <Route path = "/" element = {<Home />} />
                 <Route path = "/Home" element = {<Home />} />
+
+                <Route path = "/landingPage" element = {<ProtectedRoutes>
+                    <LandingPage />
+                </ProtectedRoutes>} />
 
                 <Route path = "/food" element = {<ProtectedRoutes>
                     <Food />
