@@ -25,11 +25,12 @@ function SearchForm(props) {
         type="text"
         name="message"
         id="message"
+        placeholder="Enter a food to learn more about its nutrition..."
         value={food.message}
         onChange={handleChange}
       />
 
-      <input type="button" value="Submit" onClick={submitForm} />
+      <input type="button" value="Search" onClick={submitForm}  />
     </form>
   );
 }

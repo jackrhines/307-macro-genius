@@ -2,9 +2,59 @@ body {
   background-color: #26afac;
 }
 
-.searchbar {
-  position: relative;
-  margin-left: 10%;
-  margin-top: 7%;
-  margin-right: 10%;
+pOpenAi {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  color: white;
+  font-size: 20px;
+  font-family: "Inter", Helvetica;
 }
+
+
+.searchbar {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.feedbackWrapper {
+  height: 90%;
+  overflow: scroll;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  scrollbar-color: white;
+}
+
+.searchPageWrapper{
+    background-color: #165C60;
+    height: 600px;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 20%;
+    bottom: 20%;
+    text-align: left;
+    padding: 40px;
+}
+
+input[type=text] {
+  width: 80%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  font-family: "Inter", Helvetica;
+  background-color: #007bff;
+  color: #ffffff;
+  width: 15%;
+  margin-left: 5%;
+  margin-left: 5%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+

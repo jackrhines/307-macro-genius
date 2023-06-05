@@ -21,21 +21,21 @@ const Search = () => {
   }
 
   return (
-    <div className={styles.body}>
-      <div className={styles.searchbar}>
-        <SearchForm handleSubmit={updateList} />
-        <div>
-          {msgs.map((item) => (
-            <div>
-              <hr />
-              <p>Food Info: {item.content}</p>
-              <hr />
+    <div className={styles.searchPageWrapper}>
+            <div className={styles.feedbackWrapper}>
+               {msgs.map((item) => (
+                    <div>
+                    <hr />
+                    <pOpenAi>Food Info: {item.content}</pOpenAi>
+                    <hr />
+                    </div>
+                ))}
             </div>
-          ))}
-        </div>
-      </div>
+            <div className={styles.searchbar}>
+                <SearchForm handleSubmit={updateList} />
+            </div>
     </div>
-  );
+    );
 };
 
 export default Search;

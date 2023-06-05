@@ -42,7 +42,6 @@ const App = () => {
                 <ul className="search-navigate-menu">
                     <li><a href="/search">Search</a></li>
                 </ul>
-
                 <ul className="signout-navigate-menu">
                     <li><a onClick={() => logout()}> Sign Out</a></li>
                 </ul>

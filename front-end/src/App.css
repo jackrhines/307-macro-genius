@@ -107,6 +107,7 @@ a:active {
 }
 
 .top-logo-text-wrapper {
+  width: 50%;
   color: #ffffff;
   font-family: "Inter", Helvetica;
   font-size: 40px;
@@ -305,13 +306,14 @@ a:active {
 .Img-wrapper {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  top: 90%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
   position: absolute;
   text-align: center;
-  top: 80%;
   align-items: center;
   justify-content: center;
-
   gap: 200px;
 }
 
