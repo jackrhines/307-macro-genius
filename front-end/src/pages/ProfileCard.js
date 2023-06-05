@@ -25,9 +25,6 @@ const ProfileCard = () => {
 
     return (
         <div className="profile-card">
-            <div className="image-container">
-                {}
-            </div>
             <div className="profile-info">
                 <p className="info-item">{`Name: ${profile.firstName} ${profile.lastName}`}</p>
                 <p className="info-item">{`Age: ${profile.age}`}</p>
