@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from "./LandingPage.module.css";
 import Cookies from "universal-cookie";
 import ProgressBar from './ProgressBar';
+import ProfileCard from './ProfileCard';
 
 const cookies = new Cookies();
 
@@ -26,11 +27,14 @@ const LandingPage = (props) => {
             <div className={styles.progressBar}>
                 <ProgressBar/>
             </div>
-            <div className="calculate-page-overlap">
+            {/* <div className="calculate-page-overlap">
             <ul className="profile-navigate-menu">
                 <li><a href="/">Profile</a></li>
             </ul>
 
+            </div> */}
+            <div className={styles.ProfileCard}>
+                <ProfileCard/>
             </div>
         </div>
     );
