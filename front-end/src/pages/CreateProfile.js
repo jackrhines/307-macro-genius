@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import './CreateProfile.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'universal-cookie';
+const { v4: uuidv4 } = require("uuid");
+
+const cookies = new Cookies();
+const profId = uuidv4();
 
 const CreateProfile = () => {
   const [firstName, setFirstName] = useState('');
@@ -14,8 +19,11 @@ const CreateProfile = () => {
   const navigate = useNavigate();
 
   const handleSubmit = event => {
+    
     event.preventDefault();
+    cookies.set("PROFILE", profId, {path : "/"})
     axios.post('http://localhost:8000/createprofile', {
+        id: profId,
         firstName: firstName,
         lastName: lastName,
         age: age,

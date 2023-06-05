@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ProfileCard.module.css';
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
+const id = cookies.get("PROFILE");
 
 const ProfileCard = () => {
     const [profile, setProfile] = useState({
@@ -13,8 +17,9 @@ const ProfileCard = () => {
         activityLevel: ''
     });
 
+
     useEffect(() => {
-        axios.get('http://localhost:8000/userprofile')
+        axios.get('http://localhost:8000/userprofile/' + id)
         .then(response => {
             setProfile(response.data);
         })
@@ -25,9 +30,6 @@ const ProfileCard = () => {
 
     return (
         <div className="profile-card">
-            <div className="image-container">
-                {}
-            </div>
             <div className="profile-info">
                 <p className="info-item">{`Name: ${profile.firstName} ${profile.lastName}`}</p>
                 <p className="info-item">{`Age: ${profile.age}`}</p>
