@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ProfileCard.module.css';
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
+const id = cookies.get("PROFILE");
 
 const ProfileCard = () => {
-    const [profile, setProfile] = useState({
-        firstName: '',
-        lastName: '',
-        age: '',
-        sex: '',
-        height: '',
-        weight: '',
-        activityLevel: ''
-    });
+  const [profile, setProfile] = useState({
+    firstName: "",
+    lastName: "",
+    age: "",
+    sex: "",
+    height: "",
+    weight: "",
+    activityLevel: "",
+  });
+
 
     useEffect(() => {
-        axios.get('http://localhost:8000/userprofile')
+        axios.get('http://localhost:8000/userprofile/' + id)
         .then(response => {
             setProfile(response.data);
         })

@@ -1,23 +1,22 @@
 .goal-list {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .goal-list h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .goal-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .goal-list li {
-    margin-bottom: 5px;
-  }
-  
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.goal-list h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.goal-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.goal-list li {
+  margin-bottom: 5px;
+}

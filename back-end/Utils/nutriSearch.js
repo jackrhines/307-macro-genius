@@ -22,14 +22,11 @@ async function nutriSearch(food){
             }
         )
 
-
-	return response.data.choices[0].message
-
-    } catch (error) {
-        console.error("Error:", error)
-        return "error"
-    }
-
+    return response.data.choices[0].message;
+  } catch (error) {
+    console.error("Error:", error);
+    return "error";
+  }
 }
 
 module.exports = nutriSearch;

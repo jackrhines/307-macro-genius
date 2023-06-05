@@ -1,49 +1,49 @@
 /* Profile Pic */
 .profilePicture circle {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 75%;
-    top: 1%;
-    background: #C4C4C4;
-    border-radius: 50%;
-    z-index: 2;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 75%;
+  top: 1%;
+  background: #c4c4c4;
+  border-radius: 50%;
+  z-index: 2;
 }
 
 .landingText label {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    padding: 10px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    color: black;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  color: black;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Title */
 .welcomeMessage label {
-    display: flex;
-    left: 50%;
-    top: 30%;
-    font-size: 60px;
+  display: flex;
+  left: 50%;
+  top: 30%;
+  font-size: 60px;
 }
 
 /* Date */
-.dateWrapper label{
-    display: flex;
-    left: 10%;
-    top: 30%;
+.dateWrapper label {
+  display: flex;
+  left: 10%;
+  top: 30%;
 }
-  
+
 /* Motivational Quote */
 .motivationalQuote label {
-    display: flex;
-    left: 50%;
-    top: 40%;
+  display: flex;
+  left: 50%;
+  top: 40%;
 }

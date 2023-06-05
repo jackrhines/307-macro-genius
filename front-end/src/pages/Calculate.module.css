@@ -120,16 +120,16 @@ a:active {
 }
 
 
-.topLogoTextWrapper{
-    color: #ffffff;
-    font-family: "Inter", Helvetica;
-    font-size: 40px;
-    font-weight: 800;
-    left: 45px;
-    letter-spacing: -1.82px;
-    line-height: 100px;
-    position: relative;
-    white-space: nowrap;
+.topLogoTextWrapper {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 45px;
+  letter-spacing: -1.82px;
+  line-height: 100px;
+  position: relative;
+  white-space: nowrap;
 }
 
 
@@ -174,7 +174,6 @@ a:active {
 .homeNavigateMenu{
     font-family: "Inter", Helvetica;
     position: absolute;
-    
     left: 85%;
     bottom: 10%;
     background-color: #1ca655;

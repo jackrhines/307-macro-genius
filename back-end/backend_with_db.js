@@ -10,7 +10,6 @@ const nutriSearch = require("./Utils/nutriSearch");
 const UserProfile = require("./models/profile");
 const { v4: uuidv4 } = require("uuid");
 
-
 const app = express();
 const port = 8000;
 
@@ -136,7 +135,6 @@ app.post("/foods", async (req, res) => {
 
 app.delete("/foods/:id", async (req, res) => {
   const id = req.params["id"];
-  console.log(id);
   const result = await foodServices.deleteFoodById(id);
   console.log(result);
   res.status(204).end();
@@ -145,7 +143,7 @@ app.delete("/foods/:id", async (req, res) => {
 app.post("/search", async (req, res) => {
   const message = req.body.message;
 
-  const responseJSON = await nutriSearch(message)
+  const responseJSON = await nutriSearch(message);
   console.log(responseJSON);
   if (responseJSON) res.status(201).send({ content: responseJSON.content });
   else res.status(500).end();
@@ -153,7 +151,7 @@ app.post("/search", async (req, res) => {
 
 app.post("/createprofile", async (req, res) => {
   const user = new UserProfile({
-    userId: uuidv4(),
+    userId: req.body.id,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     age: req.body.age,
@@ -171,10 +169,12 @@ app.post("/createprofile", async (req, res) => {
   }
 });
 
-app.get("/userprofile", async (req, res) => {
+app.get("/userprofile/:id", async (req, res) => {
+  const id = req.params["id"];
+  console.log(id);
   try {
     const user = await UserProfile.findOne({
-      userId: "480a3cf8-e0a4-48d0-9605-685f6cfa3e88",
+      userId: id,
     });
     if (!user) {
       res.status(404).send("User not found");
@@ -186,7 +186,6 @@ app.get("/userprofile", async (req, res) => {
     res.status(500).send("Server error");
   }
 });
-
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

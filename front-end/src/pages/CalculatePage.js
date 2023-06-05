@@ -1,48 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import styles from "./Calculate.module.css";
 
 
 const CalculatePage = () => {
-    const [age, setAge] = useState(0);
-    const [sex, setSex] = useState('select');
-    const [heightInches, setHeightInches] = useState(0);
-    const [weight, setWeight] = useState(0);
-    const [activityLevel, setActivityLevel] = useState(0);
-    const [calorieIntake, setCalorieIntake] = useState(0);
+  const [age, setAge] = useState(0);
+  const [sex, setSex] = useState("select");
+  const [heightInches, setHeightInches] = useState(0);
+  const [weight, setWeight] = useState(0);
+  const [activityLevel, setActivityLevel] = useState(0);
+  const [calorieIntake, setCalorieIntake] = useState(0);
 
-    function calculateCalorieIntake() {
-        // Harris-Benedict equation
-        let bmr = 0;
-        if (sex === 'select'){
-            bmr = 0;
-        }
-        else if (sex === 'male') {
-            bmr = 88.362 + (13.397 * (weight * 0.453592)) + (4.799 * (heightInches * 2.54)) - (5.677 * age);
-        } else if (sex === 'female') {
-            bmr = 447.593 + (9.247 * (weight * 0.453592)) + (3.098 * (heightInches * 2.54)) - (4.330 * age);
-        } 
-        let activityFactor = 1;
-        if (activityLevel === 'low') {
-            activityFactor = 1.2;
-        } else if (activityLevel === 'medium') {
-            activityFactor = 1.55;
-        } else if (activityLevel === 'high') {
-            activityFactor = 1.725;
-        }
-        let dailyCalories = bmr * activityFactor;
-        setCalorieIntake(dailyCalories.toFixed(0));
+  function calculateCalorieIntake() {
+    // Harris-Benedict equation
+    let bmr = 0;
+    if (sex === "select") {
+      bmr = 0;
+    } else if (sex === "male") {
+      bmr =
+        88.362 +
+        13.397 * (weight * 0.453592) +
+        4.799 * (heightInches * 2.54) -
+        5.677 * age;
+    } else if (sex === "female") {
+      bmr =
+        447.593 +
+        9.247 * (weight * 0.453592) +
+        3.098 * (heightInches * 2.54) -
+        4.33 * age;
     }
+    let activityFactor = 1;
+    if (activityLevel === "low") {
+      activityFactor = 1.2;
+    } else if (activityLevel === "medium") {
+      activityFactor = 1.55;
+    } else if (activityLevel === "high") {
+      activityFactor = 1.725;
+    }
+    let dailyCalories = bmr * activityFactor;
+    setCalorieIntake(dailyCalories.toFixed(0));
+  }
 
-    function convertToFeet(heightInches) {
-        let feet = Math.floor(heightInches / 12);
-        let inches = heightInches % 12;
-        return feet + "'" + inches + "\"";
-    }
+  function convertToFeet(heightInches) {
+    let feet = Math.floor(heightInches / 12);
+    let inches = heightInches % 12;
+    return feet + "'" + inches + '"';
+  }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        calculateCalorieIntake();
-    }
+  function handleSubmit(event) {
+    event.preventDefault();
+    calculateCalorieIntake();
+  }
 
     
     return (

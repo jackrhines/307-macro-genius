@@ -1,28 +1,21 @@
-import {useState} from 'react'
+import { useState } from "react";
 
 function Form(props) {
-  const [food, setFood] = useState(
-    {
-      name: "",
-      calories: "",
-      user: "",
-    }
-  );
+  const [food, setFood] = useState({
+    name: "",
+    calories: "",
+    user: "",
+  });
   function handleChange(event) {
     const { name, value } = event.target;
     if (name === "calories")
-      setFood(
-        {name: food['name'], calories: value, user: props.user}
-      );
-    else
-      setFood(
-        {name: value, calories: food['calories'], user: props.user}
-      );
+      setFood({ name: food["name"], calories: value, user: props.user });
+    else setFood({ name: value, calories: food["calories"], user: props.user });
   }
 
   function submitForm() {
     props.handleSubmit(food);
-    setFood({name: '', calories: '', user: ''});
+    setFood({ name: "", calories: "", user: "" });
   }
 
   return (
@@ -33,14 +26,16 @@ function Form(props) {
         name="name"
         id="name"
         value={food.name}
-        onChange={handleChange} />
+        onChange={handleChange}
+      />
       <label htmlFor="calories">Calories</label>
       <input
         type="text"
         name="calories"
         id="calories"
         value={food.calories}
-        onChange={handleChange} />
+        onChange={handleChange}
+      />
       <input type="button" value="Submit" onClick={submitForm} />
     </form>
   );

@@ -1,5 +1,5 @@
-import React from 'react';
-import './GoalList.css';
+import React from "react";
+import "./GoalList.css";
 
 const GoalList = ({ title, goals }) => {
   return (
