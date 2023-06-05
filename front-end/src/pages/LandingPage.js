@@ -54,7 +54,7 @@ const LandingPage = (props) => {
                     <label>Welcome, {curUser}!</label>
                 </div>
                 <div className={styles.motivationalQuote}>
-                    <label>"The only bad workout is the one that didn't happen."</label>
+                    <label>Keep up the progress! You got it!</label>
                 </div>
                 <div className={styles.dateWrapper}>
                     <label>{date}</label>
@@ -63,12 +63,6 @@ const LandingPage = (props) => {
             <div className={styles.progressBar}>
                 <ProgressBar calories={calories} goal={2000}/>
             </div>
-            {/* <div className="calculate-page-overlap">
-            <ul className="profile-navigate-menu">
-                <li><a href="/">Profile</a></li>
-            </ul>
-
-            </div> */}
             <div className={styles.ProfileCard}>
                 <ProfileCard/>
             </div>
