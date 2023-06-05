@@ -12,9 +12,6 @@ const LandingPage = (props) => {
 
     return (
         <div className={styles.body}>
-            <div className={styles.profilePicture}>
-                <circle className='profilePicture'/>
-            </div>
             <div className={styles.landingText}>
                 <div className={styles.welcomeMessage}>
                     <label>Welcome, {curUser}!</label>
