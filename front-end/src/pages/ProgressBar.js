@@ -24,7 +24,9 @@ const ProgressBar = (props) => {
             <div className={styles.progressbar}>
                 <div className={styles.progress} style={{ "--progress-width": progressWidth, "--progress-color": color }}></div>
             </div>
-            <div className={styles.progressText}>{progress}%</div>
+            <div className={styles.progressText}>Progress: {progress}%</div>
+            <div className={styles.progressText}>Calories Consumed:</div>
+            <div className={styles.progressText}>{props.calories} / {props.goal}</div>
         </div>
     );
 }

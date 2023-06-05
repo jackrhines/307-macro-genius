@@ -53,9 +53,9 @@ const LandingPage = (props) => {
                 <div className={styles.welcomeMessage}>
                     <label>Welcome, {curUser}!</label>
                 </div>
-                <div className={styles.motivationalQuote}>
-                    <label>"The only bad workout is the one that didn't happen."</label>
-                </div>
+                {/*<div className={styles.motivationalQuote}>*/}
+                {/*    <label>"The only bad workout is the one that didn't happen."</label>*/}
+                {/*</div>*/}
                 <div className={styles.dateWrapper}>
                     <label>{date}</label>
                 </div>
