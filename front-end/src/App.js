@@ -1,22 +1,21 @@
 
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import MainRoutes from './MainRoutes';
 import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
+
 import deadlift from "./Images/deadlift.png"
 import macro from "./Images/macro.png"
 import supplement from "./Images/supplement.png"
-import treadmill from "./Images/treadmill.png";
-import {useLocation} from 'react-router-dom';
-
-
+import treadmill from "./Images/treadmill.png"
+import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
 
 const App = () => {
-
-    const [currentPage, setCurrentPage] = useState(useLocation().pathname);
 
     const logout = () => {
         cookies.remove("TOKEN", { path: "/" });
@@ -49,7 +48,7 @@ const App = () => {
                     <li><a onClick={() => logout()}> Sign Out</a></li>
                 </ul>
             </div>
-            <div className={`Img-wrapper ${currentPage === "/" ? "" : "hide-menu"}`}>
+            <div className="Img-wrapper">
                     <image>
                         <img src={deadlift} alt=""/>
                     </image>

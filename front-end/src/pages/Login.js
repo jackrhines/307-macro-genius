@@ -58,7 +58,7 @@ const Login = (props) => {
       cookies.set("USER", result.data.username, {
         path:"/",
       });
-      window.location.href = "/food";
+      window.location.href = "/landingPage";
     }).catch((error) => {
       alert("Login failed");
       error = new Error();
