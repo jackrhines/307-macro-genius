@@ -48,5 +48,15 @@ async function findUserByUserName(username) {
   }
 }
 
+async function deleteUserByUsername(Id) {
+  try {
+    return await userModel.findByIdAndDelete(Id);
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+}
+
+exports.deleteUserByUsername = deleteUserByUsername;
 exports.addUser = addUser;
 exports.findUserByUserName = findUserByUserName;
