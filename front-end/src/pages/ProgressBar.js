@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import styles from "./ProgressBar.module.css";
 import Cookies from "universal-cookie";
 
-const cookies = new Cookies();
+// const cookies = new Cookies();
 
 const ProgressBar = (props) => {
     // const [progress, setProgress] = useState(0);
 
-    const progress = 50;
+    const progress = props.calories / props.goal * 100;
 
     const getColor = (percent) => {
+        console.log(props.calories)
         if (percent < 30) return "red";
         else if (percent < 70) return "yellow";
         else return "green";
