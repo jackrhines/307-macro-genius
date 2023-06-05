@@ -54,6 +54,11 @@ const CalculatePage = () => {
     
     return (
         <div className={styles.body}>
+            <div className={styles.calculatePageOverlap}>
+                <div className={styles.topLogoTextWrapper}>MacroGenius</div>
+                <ul className={styles.calculateNavigateMenu}>
+                </ul>
+            </div>
             <div className={styles.calculatePageGreyBody}>
                 <h3 className={styles.h3}> Calorie Calculator</h3>
                 <form className={styles.form} onSubmit={handleSubmit}>
@@ -86,12 +91,13 @@ const CalculatePage = () => {
                             onChange= {event => setHeightInches(event.target.value)}
                         />
                         <input className={styles.input}
-                            type= "text"
+                            type= "height"
                             value= {convertToFeet(heightInches)}
                             readOnly
                         />
                     </label>
                     <br />
+
                     <label className={styles.label}>
                         Weight (lbs):
                         <br />
@@ -118,6 +124,7 @@ const CalculatePage = () => {
                     <br />
                     <button className={styles.button}
                     type="submit" onClick={handleSubmit}>Calculate</button>
+
                 </form>
 
                 <div className={styles.calculatePageResultBody}>

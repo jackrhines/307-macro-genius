@@ -21,7 +21,7 @@ function TableBody(props) {
         <td>{row.name}</td>
         <td>{row.calories}</td>
         <td>
-          <button onClick={() => props.removeFood(index)}>Delete</button>
+          <button onClick={() => props.removeFood(index)} type="remove">Delete</button>
         </td>
       </tr>
     );

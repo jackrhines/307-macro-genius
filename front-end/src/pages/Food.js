@@ -90,9 +90,11 @@ function Food() {
         <div className="top-logo-text-wrapper">MacroGenius</div>
       </div>
       <div className="food-input-grey-body">
-        <DatePicker selected={date} onChange={(d) => setDate(d)} />
-        <Table foodData={foods} removeFood={removeOneFood} />
-        <Form handleSubmit={updateList} user={currentUser} />
+        <DatePicker selected={date} onChange={(d) => setDate(d)}>Date</DatePicker>
+            <div className="foodTableWrapper">
+                <Table foodData={foods} removeFood={removeOneFood} />
+            </div>
+        <Form type="foods" handleSubmit={updateList} user={currentUser} />
       </div>
     </div>
   );

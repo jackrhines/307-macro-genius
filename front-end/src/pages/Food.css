@@ -23,18 +23,69 @@ body {
   white-space: nowrap;
 }
 
-.food-input-grey-body {
-  background-color: #d9d9d9;
-  /*height: 600px;*/
-  position: absolute;
-  left: 20%;
-  right: 20%;
-  top: 18%;
-  bottom: 5%;
-  height: 75%;
-  width: 60%;
+.food-input-grey-body{
+    background-color: #165C60;
+    height: 600px;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 20%;
+    bottom: 20%;
+    text-align: left;
+    padding: 40px;
+
 }
 
 .food-table {
   width: 100%;
+  color: white;
+}
+
+.foodTableWrapper {
+  margin-top: 40px;
+  height: 65%;
+  overflow: scroll;
+  overflow-x: hidden; /*Hide horizontal scrollbar */
+  scrollbar-color: white;
+}
+
+Table{
+    font-family: "Inter", Helvetica;
+    width: 100%;
+    color: white;
+    text-align: left;
+
+}
+
+th{
+    font-size: 30px;
+}
+
+td {
+  font-size: 20px;
+}
+
+
+button[type=remove] {
+  font-family: "Inter", Helvetica;
+  background-color: #007bff;
+  color: #ffffff;
+  width: 80%;
+  left: 0%;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: left;
+  align-items: left;
+}
+
+Form[type=foods] {
+  font-family: "Inter", Helvetica;
+  background-color: #007bff;
+  color: #ffffff;
+  width: 80%;
+  left: 0%;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: left;
+  align-items: left;
 }

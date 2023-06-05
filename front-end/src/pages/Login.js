@@ -90,7 +90,7 @@ const Login = (props) => {
               </span>
             </div>
             <div className="form-group">
-              <label>Username</label>
+              <label type="login">Username</label>
               <input
                 value={username}
                 onChange={handleUsernameChange}
@@ -100,7 +100,7 @@ const Login = (props) => {
               />
             </div>
             <div className="form-group">
-              <label>Password</label>
+              <label type="login">Password</label>
               <input
                 value={password}
                 onChange={handlePasswordChange}

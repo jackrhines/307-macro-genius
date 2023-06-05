@@ -1,5 +1,3 @@
-
-
 body{
     background-color: #26afac
 }
@@ -8,10 +6,7 @@ label {
     font-family: "Inter", Helvetica;
     color: white;
     display: block;
-    margin-bottom: 1px;
-    margin-left: 5%;
-    line-height: 25px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 input[type="number"],
@@ -22,9 +17,8 @@ input[type="number"],
         border: 1px solid #ccc;
         font-size: 16px;
         margin-bottom: 1px;
-        width: 20%;
+        width: 30%;
     }
-
 
 input[type="text"],
 select {
@@ -34,12 +28,23 @@ select {
     border: 1px solid #ccc;
     font-size: 16px;
     margin-bottom: 1px;
-    width: 10%;
+    width: 30%;
+}
+
+input[type="height"],
+select {
+    font-family: "Inter", Helvetica;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 1px;
+    width: 5%;
 }
 
 select {
     font-family: "Inter", Helvetica;
-    width: 20%;
+    width: 30%;
 }
 
 button{
@@ -68,13 +73,11 @@ h1{
 
 h2{
     font-family: "Inter", Helvetica;
-    margin-left: 5%;
 }
 
 h3{
     font-family: "Inter", Helvetica;
     color: white;
-    margin-left: 5%;
     font-size: 35px;
 }
 
@@ -137,7 +140,6 @@ a:active {
 .calculatePageGreyBody{
     background-color: #165C60;
     font-size: 25px;
-    font-color: white;
     height: 600px;
     position: absolute;
     left: 25%;

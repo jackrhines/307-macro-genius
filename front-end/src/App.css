@@ -2,13 +2,6 @@ body {
   background-color: #26afac;
 }
 
-label {
-  font-family: "Inter", Helvetica;
-  display: block;
-  margin-bottom: 1px;
-  margin-left: 10%;
-}
-
 input[type="number"],
 select {
   font-family: "Inter", Helvetica;
