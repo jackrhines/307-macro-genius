@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-function TableHeader()  {
+function TableHeader() {
   return (
     <thead>
       <tr>
@@ -25,22 +25,17 @@ function TableBody(props) {
         </td>
       </tr>
     );
-   }
-  );
-  return (
-      <tbody>
-        {rows}
-       </tbody>
-   );
+  });
+  return <tbody>{rows}</tbody>;
 }
 
 function Table(props) {
-    return (
-        <table>
-            <TableHeader />
-            <TableBody foodData={props.foodData} removeFood={props.removeFood}/>
-        </table>
-    );
+  return (
+    <table>
+      <TableHeader />
+      <TableBody foodData={props.foodData} removeFood={props.removeFood} />
+    </table>
+  );
 }
 
 export default Table;

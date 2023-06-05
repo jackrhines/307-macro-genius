@@ -1,40 +1,40 @@
-body{
-    background-color: #26afac
+body {
+  background-color: #26afac;
 }
 
-.calculate-page-overlap{
-    background-color: #165C60;
-    height: 70px;
-    left: 0;
-    position: absolute;
-    top: 0px;
-    width: 100%;
+.calculate-page-overlap {
+  background-color: #165c60;
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
 }
 
-.top-logo-text-wrapper{
-    color: #ffffff;
-    font-family: "Inter", Helvetica;
-    font-size: 40px;
-    font-weight: 800;
-    left: 45px;
-    letter-spacing: -1.82px;
-    line-height: 100px;
-    position: relative;
-    white-space: nowrap;
+.top-logo-text-wrapper {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 45px;
+  letter-spacing: -1.82px;
+  line-height: 100px;
+  position: relative;
+  white-space: nowrap;
 }
 
-.food-input-grey-body{
-    background-color: #d9d9d9;
-    /*height: 600px;*/
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    top: 18%;
-    bottom: 5%;
-    height: 75%;
-    width: 60%;
+.food-input-grey-body {
+  background-color: #d9d9d9;
+  /*height: 600px;*/
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 18%;
+  bottom: 5%;
+  height: 75%;
+  width: 60%;
 }
 
-.food-table{
-    width: 100%
+.food-table {
+  width: 100%;
 }

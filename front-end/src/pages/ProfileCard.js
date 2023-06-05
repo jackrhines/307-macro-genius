@@ -7,15 +7,15 @@ const cookies = new Cookies();
 const id = cookies.get("PROFILE");
 
 const ProfileCard = () => {
-    const [profile, setProfile] = useState({
-        firstName: '',
-        lastName: '',
-        age: '',
-        sex: '',
-        height: '',
-        weight: '',
-        activityLevel: ''
-    });
+  const [profile, setProfile] = useState({
+    firstName: "",
+    lastName: "",
+    age: "",
+    sex: "",
+    height: "",
+    weight: "",
+    activityLevel: "",
+  });
 
 
     useEffect(() => {
