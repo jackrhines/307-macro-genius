@@ -5,17 +5,17 @@ mongoose.set("debug", true);
 
 dotenv.config();
 
-async function getFoods(name, user) {
-  let result;
-  if (user === undefined) {
-    result = await foodModel.find();
-  } else if (name === undefined) {
-    result = await foodModel.find({ user: user });
-  } else if (name) {
-    result = await findFoodByName(name, user);
-  }
-  return result;
-}
+// async function getFoods(name, user) {
+//   let result;
+//   if (user === undefined) {
+//     result = await foodModel.find();
+//   } else if (name === undefined) {
+//     result = await foodModel.find({ user: user });
+//   } else if (name) {
+//     result = await findFoodByName(name, user);
+//   }
+//   return result;
+// }
 
 async function getDailyFoods(user, start, end) {
   if (user === undefined || start === undefined || end === undefined) {
@@ -41,9 +41,9 @@ async function findFoodById(id) {
   }
 }
 
-async function findFoodByName(name, user) {
-  return foodModel.find({ name: name, user: user });
-}
+// async function findFoodByName(name, user) {
+//   return foodModel.find({ name: name, user: user });
+// }
 
 async function addFood(food) {
   try {
@@ -64,8 +64,8 @@ async function deleteFoodById(id) {
   }
 }
 
-exports.getFoods = getFoods;
-exports.findFoodByName = findFoodByName;
+// exports.getFoods = getFoods;
+// exports.findFoodByName = findFoodByName;
 exports.findFoodById = findFoodById;
 exports.addFood = addFood;
 exports.deleteFoodById = deleteFoodById;
