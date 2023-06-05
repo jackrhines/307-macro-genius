@@ -10,7 +10,6 @@ const nutriSearch = require("./Utils/nutriSearch");
 const UserProfile = require("./models/profile");
 const { v4: uuidv4 } = require("uuid");
 
-
 const app = express();
 const port = 8000;
 
@@ -145,7 +144,7 @@ app.delete("/foods/:id", async (req, res) => {
 app.post("/search", async (req, res) => {
   const message = req.body.message;
 
-  const responseJSON = await nutriSearch(message)
+  const responseJSON = await nutriSearch(message);
   console.log(responseJSON);
   if (responseJSON) res.status(201).send({ content: responseJSON.content });
   else res.status(500).end();
@@ -186,7 +185,6 @@ app.get("/userprofile", async (req, res) => {
     res.status(500).send("Server error");
   }
 });
-
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

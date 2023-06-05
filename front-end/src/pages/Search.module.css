@@ -1,12 +1,10 @@
-
-body{
-    background-color: #26afac;
-    
+body {
+  background-color: #26afac;
 }
 
-.searchbar{
-    position: relative;
-    margin-left: 10%;
-    margin-top: 7%;
-    margin-right: 10%;
+.searchbar {
+  position: relative;
+  margin-left: 10%;
+  margin-top: 7%;
+  margin-right: 10%;
 }
