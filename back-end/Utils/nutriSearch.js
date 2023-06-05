@@ -22,7 +22,7 @@ async function nutriSearch(food){
             }
         )
 
-        
+
 	return response.data.choices[0].message
 
     } catch (error) {

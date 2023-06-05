@@ -47,13 +47,8 @@ const CalculatePage = () => {
     
     return (
         <div className={styles.body}>
-            <div className={styles.calculatePageOverlap}>
-                <div className={styles.topLogoTextWrapper}>MacroGenius</div>
-                <ul className={styles.calculateNavigateMenu}>
-                </ul>
-            </div>
             <div className={styles.calculatePageGreyBody}>
-                <h2 className={styles.h2}> Calorie Calculator</h2>
+                <h3 className={styles.h3}> Calorie Calculator</h3>
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <label className={styles.label}>
                         Age:
@@ -90,7 +85,6 @@ const CalculatePage = () => {
                         />
                     </label>
                     <br />
-                    
                     <label className={styles.label}>
                         Weight (lbs):
                         <br />
@@ -117,19 +111,16 @@ const CalculatePage = () => {
                     <br />
                     <button className={styles.button}
                     type="submit" onClick={handleSubmit}>Calculate</button>
-                    
                 </form>
 
                 <div className={styles.calculatePageResultBody}>
                     {
                     <div className={styles.calculatePageResultTextWrapper}>
-                    Your average daily calorie intake: {calorieIntake}
+                    Your average daily calorie intake:
+                    <div className={styles.ResultTextWrapper}>{calorieIntake}</div>
                     </div>
                     }
-                        
-                        
                 </div>
-                
             </div>
         </div>
     );
