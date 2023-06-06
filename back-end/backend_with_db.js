@@ -159,6 +159,7 @@ app.post("/createprofile", async (req, res) => {
     height: req.body.height,
     weight: req.body.weight,
     activityLevel: req.body.activityLevel,
+    calorieGoal: req.body.calorieGoal,
   });
 
   try {

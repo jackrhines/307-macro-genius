@@ -16,6 +16,7 @@ const LandingPage = (props) => {
   }/${current.getDate()}/${current.getFullYear()}`;
   const curUser = cookies.get("USER");
   const [calories, setCalories] = useState(0);
+  
 
   useEffect(() => {
     fetchAll(curUser).then((result) => {

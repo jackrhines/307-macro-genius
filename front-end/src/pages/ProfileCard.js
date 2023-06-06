@@ -15,6 +15,7 @@ const ProfileCard = () => {
     height: "",
     weight: "",
     activityLevel: "",
+    calorieGoal: "",
   });
 
 
@@ -37,6 +38,7 @@ const ProfileCard = () => {
                 <p className="info-item">{`Height: ${profile.height}`}</p>
                 <p className="info-item">{`Weight: ${profile.weight}`}</p>
                 <p className="info-item">{`Activity Level: ${profile.activityLevel}`}</p>
+                <p className="info-item">{`Calorie Goal: ${profile.calorieGoal}`}</p>
             </div>
         </div>
     );

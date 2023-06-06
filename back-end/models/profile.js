@@ -34,6 +34,10 @@ const ProfileSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  calorieGoal: {
+    type: Number,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("UserProfile", ProfileSchema);

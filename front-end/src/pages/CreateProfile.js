@@ -16,6 +16,7 @@ const CreateProfile = () => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [activityLevel, setActivityLevel] = useState("");
+  const [calorieGoal, setCalorieGoal] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = event => {
@@ -31,11 +32,12 @@ const CreateProfile = () => {
         height: height,
         weight: weight,
         activityLevel: activityLevel,
+        calorieGoal: calorieGoal,
       })
       .then((response) => {
         localStorage.setItem("userId", response.data.userId);
         console.log(response.data);
-        navigate("/profile");
+        navigate("/landingpage");
       })
       .catch((error) => {
         console.log(error);
@@ -80,6 +82,12 @@ const CreateProfile = () => {
           placeholder="Weight"
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Calorie Goal"
+          value = {calorieGoal}
+          onChange = {(e) => setCalorieGoal(e.target.value)}
         />
         <select
           value={activityLevel}
