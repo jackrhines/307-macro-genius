@@ -13,6 +13,12 @@ test("test add user", async () => {
   expect(result[0].username).toBe("jestTest");
 });
 //add a delete for user-services for testing add user.
+test("test add user -- error", async () => {
+  user = { username: "jestTest", password: "123" };
+  const result = await userServices.addUser(user);
+
+  expect(result).toBe(false);
+});
 
 test("test delete user by username", async () => {
   const result = await userServices.findUserByUserName("jestTest");
