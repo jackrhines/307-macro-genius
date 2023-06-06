@@ -40,21 +40,11 @@ async function addUser(user) {
 }
 
 async function findUserByUserName(username) {
-  try {
-    return await userModel.find({ username: username });
-  } catch (error) {
-    console.log(error);
-    return false;
-  }
+  return await userModel.find({ username: username });
 }
 
 async function deleteUserByUsername(Id) {
-  try {
-    return await userModel.findByIdAndDelete(Id);
-  } catch (error) {
-    console.log(error);
-    return false;
-  }
+  return await userModel.findByIdAndDelete(Id);
 }
 
 exports.deleteUserByUsername = deleteUserByUsername;
