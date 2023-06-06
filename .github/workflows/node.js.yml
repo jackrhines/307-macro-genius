@@ -10,6 +10,9 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: ./back-end
     runs-on: ${{ matrix.os }} #ubuntu-latest
 
     strategy:
