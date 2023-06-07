@@ -1,5 +1,5 @@
 # MacroGenius
-[![Node.js CI](https://github.com/jackrhines/307-macro-genius/actions/workflows/node.js.yml/badge.svg)](https://github.com/jackrhines/307-macro-genius/actions/workflows/node.js.yml)
+[![back-end](https://github.com/jackrhines/307-macro-genius/actions/workflows/back-end.yml/badge.svg)](https://github.com/jackrhines/307-macro-genius/actions/workflows/back-end.yml)
 [![front-end](https://github.com/jackrhines/307-macro-genius/actions/workflows/front-end.yml/badge.svg)](https://github.com/jackrhines/307-macro-genius/actions/workflows/front-end.yml)
 
 Project contribution from:
