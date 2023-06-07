@@ -14,7 +14,7 @@ const cookies = new Cookies();
 
 const App = () => {
 
-  const [currentPage, setCurrentPage] = useState(useLocation().pathname);
+  const [currentPage] = useState(useLocation().pathname);
 
     const logout = () => {
         cookies.remove("TOKEN", { path: "/" });
@@ -49,7 +49,7 @@ const App = () => {
                     <li><a href="/createprofile">Create</a></li>
                 </ul>
                 <ul className="signout-navigate-menu">
-                    <li><a onClick={() => logout()}> Sign Out</a></li>
+                    <a onClick={() => logout()}> Sign Out</a>
                 </ul>
 
             </div>
