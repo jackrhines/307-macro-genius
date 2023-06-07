@@ -29,3 +29,4 @@ Code Coverage report:
 Development environment set up:
 
 
+[![Node.js CI](https://github.com/jackrhines/307-macro-genius/actions/workflows/node.js.yml/badge.svg)](https://github.com/jackrhines/307-macro-genius/actions/workflows/node.js.yml)
