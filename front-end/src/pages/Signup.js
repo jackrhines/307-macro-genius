@@ -73,7 +73,7 @@ const SignUp = (props) => {
             </span>
           </div>
           <div className="form-group">
-            <label>Full Name</label>
+            <label type="login">Full Name</label>
             <input
               value={fullName}
               onChange={handleFullNameChange}
@@ -83,7 +83,7 @@ const SignUp = (props) => {
             />
           </div>
           <div className="form-group">
-            <label>Username</label>
+            <label type="login">Username</label>
             <input
               value={username}
               onChange={handleUsernameChange}
@@ -93,7 +93,7 @@ const SignUp = (props) => {
             />
           </div>
           <div className="form-group">
-            <label>Password</label>
+            <label type="login">Password</label>
             <input
               value={password}
               onChange={handlePasswordChange}
@@ -103,7 +103,7 @@ const SignUp = (props) => {
             />
           </div>
           <div className="form-group">
-            <label>Confirm Password</label>
+            <label type="login">Confirm Password</label>
             <input
               value={passwordConfirm}
               onChange={handlePasswordConfirmChange}
