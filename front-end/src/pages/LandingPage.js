@@ -15,11 +15,22 @@ const LandingPage = (props) => {
     current.getMonth() + 1
   }/${current.getDate()}/${current.getFullYear()}`;
   const curUser = cookies.get("USER");
+  const id = cookies.get("PROFILE");
+
   const [calories, setCalories] = useState(0);
-  
+  const [profile, setProfile] = useState({
+    firstName: "",
+    lastName: "",
+    age: "",
+    sex: "",
+    height: "",
+    weight: "",
+    activityLevel: "",
+    calorieGoal: "",
+  });
 
   useEffect(() => {
-    fetchAll(curUser).then((result) => {
+    fetchFoods(curUser).then((result) => {
       if (result) {
         console.log(result);
         let sum = 0;
@@ -28,10 +39,15 @@ const LandingPage = (props) => {
         console.log(sum);
         setCalories(sum);
       }
+    })
+
+    fetchProfile(id).then((result) => {
+      if (result)
+        setProfile(result)
     });
   }, []);
 
-  async function fetchAll(user) {
+  async function fetchFoods(user) {
     try {
       const start = startOfDay(Date.now());
       const end = endOfDay(Date.now());
@@ -52,6 +68,17 @@ const LandingPage = (props) => {
     }
   }
 
+  async function fetchProfile(id) {
+    try {
+      const response = await axios.get('http://localhost:8000/userprofile/' + id)
+      console.log(response)
+      return response.data
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  }
+
   return (
     <div className={styles.body}>
       <div className={styles.landingText}>
@@ -66,16 +93,13 @@ const LandingPage = (props) => {
         </div>
       </div>
       <div className={styles.progressBar}>
-        <ProgressBar calories={calories} goal={2000} />
+        <ProgressBar calories={calories} goal={profile.calorieGoal} />
       </div>
-      {/* <div className="calculate-page-overlap">
-            <ul className="profile-navigate-menu">
-                <li><a href="/">Profile</a></li>
-            </ul>
-
-            </div> */}
+      <ul className="log-foods">
+        <li><a href="/food">Log Foods</a></li>
+      </ul>
       <div className={styles.ProfileCard}>
-        <ProfileCard />
+        <ProfileCard profile={profile} />
       </div>
     </div>
   );

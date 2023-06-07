@@ -1,44 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import './ProfileCard.module.css';
-import Cookies from 'universal-cookie';
 
-const cookies = new Cookies();
-const id = cookies.get("PROFILE");
-
-const ProfileCard = () => {
-  const [profile, setProfile] = useState({
-    firstName: "",
-    lastName: "",
-    age: "",
-    sex: "",
-    height: "",
-    weight: "",
-    activityLevel: "",
-    calorieGoal: "",
-  });
-
-
-    useEffect(() => {
-        axios.get('http://localhost:8000/userprofile/' + id)
-        .then(response => {
-            setProfile(response.data);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    }, []); 
-
+const ProfileCard = (props) => {
     return (
         <div className="profile-card">
             <div className="profile-info">
-                <p className="info-item">{`Name: ${profile.firstName} ${profile.lastName}`}</p>
-                <p className="info-item">{`Age: ${profile.age}`}</p>
-                <p className="info-item">{`Sex: ${profile.sex}`}</p>
-                <p className="info-item">{`Height: ${profile.height}`}</p>
-                <p className="info-item">{`Weight: ${profile.weight}`}</p>
-                <p className="info-item">{`Activity Level: ${profile.activityLevel}`}</p>
-                <p className="info-item">{`Calorie Goal: ${profile.calorieGoal}`}</p>
+                <p className="info-item">{`Name: ${props.profile.firstName} ${props.profile.lastName}`}</p>
+                <p className="info-item">{`Age: ${props.profile.age}`}</p>
+                <p className="info-item">{`Sex: ${props.profile.sex}`}</p>
+                <p className="info-item">{`Height: ${props.profile.height}`}</p>
+                <p className="info-item">{`Weight: ${props.profile.weight}`}</p>
+                <p className="info-item">{`Activity Level: ${props.profile.activityLevel}`}</p>
+                <p className="info-item">{`Calorie Goal: ${props.profile.calorieGoal}`}</p>
             </div>
         </div>
     );

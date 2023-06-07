@@ -7,7 +7,7 @@ import Cookies from "universal-cookie";
 const ProgressBar = (props) => {
   // const [progress, setProgress] = useState(0);
 
-  const progress = (props.calories / props.goal) * 100;
+  const progress = (props.calories / props.goal) * 100 | 0;
 
   const getColor = (percent) => {
     console.log(props.calories);

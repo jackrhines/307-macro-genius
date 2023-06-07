@@ -9,7 +9,8 @@
     "start": "node backend_with_db.js",
     "debug": "export DEBUG='express:router'\n",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "coverage": "jest --collectCoverage"
   },
   "author": "",
   "license": "ISC",
