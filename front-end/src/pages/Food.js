@@ -23,7 +23,7 @@ function Food() {
     fetchAll(curUser).then((result) => {
       if (result) setFoods(result);
     });
-  }, [date]);
+  }, [date]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function fetchAll(user) {
     try {

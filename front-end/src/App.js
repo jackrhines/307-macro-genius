@@ -49,7 +49,7 @@ const App = () => {
                     <li><a href="/createprofile">Create</a></li>
                 </ul>
                 <ul className="signout-navigate-menu">
-                    <a onClick={() => logout()}> Sign Out</a>
+                    <a href="/login" onClick={() => logout()}> Sign Out</a>
                 </ul>
 
             </div>

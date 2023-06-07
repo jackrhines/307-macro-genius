@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./ProgressBar.module.css";
-import Cookies from "universal-cookie";
 
 // const cookies = new Cookies();
 

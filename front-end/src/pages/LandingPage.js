@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "./LandingPage.module.css";
 import Cookies from "universal-cookie";
 import ProgressBar from "./ProgressBar";
-import ProfileCard from "./ProfileCard";
 import startOfDay from "date-fns/startOfDay";
 import endOfDay from "date-fns/endOfDay";
 import axios from "axios";
@@ -45,7 +44,7 @@ const LandingPage = (props) => {
       if (result)
         setProfile(result)
     });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function fetchFoods(user) {
     try {

@@ -4,7 +4,6 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import CalculatePage from "./pages/CalculatePage";
 import Food from "./pages/Food";
-import ProfilePage from "./pages/ProfilePage";
 import Search from "./pages/Search";
 import LandingPage from "./pages/LandingPage";
 import CreateProfile from "./pages/CreateProfile";

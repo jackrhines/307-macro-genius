@@ -42,6 +42,7 @@ const SignUp = (props) => {
       axios(configuration)
         .then((result) => {
           setRegister(true);
+          console.log(register);
         })
         .catch((error) => {
           error = new Error();

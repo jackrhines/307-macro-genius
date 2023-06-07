@@ -8,7 +8,7 @@ const cookies = new Cookies();
 const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(false); 
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -21,11 +21,12 @@ const Login = (props) => {
       .then((result) => {
         // assign the message in our result to the message we initialized above
         setMessage(result.data.message);
+        console.log(message);
       })
       .catch((error) => {
         error = new Error();
       });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -50,6 +51,7 @@ const Login = (props) => {
       .then((result) => {
         alert("Login success");
         setLogin(true);
+        console.log(login);
         cookies.set("TOKEN", result.data.token, {
           path: "/",
         });
