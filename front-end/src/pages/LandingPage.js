@@ -95,12 +95,10 @@ const LandingPage = (props) => {
       <div className={styles.progressBar}>
         <ProgressBar calories={calories} goal={profile.calorieGoal} />
       </div>
-      <ul className="log-foods">
+      <ul className="logfoods">
         <li><a href="/food">Log Foods</a></li>
       </ul>
-      <div className={styles.ProfileCard}>
-        <ProfileCard profile={profile} />
-      </div>
+      
     </div>
   );
 };

@@ -1,15 +1,22 @@
 .profile-card {
+  background-color: #165C60;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  
+  
   padding: 20px;
   width: 50%;
   border-radius: 10px;
   margin: auto;
-  margin-top: 20vh;
-  height: 60vh;
+  margin-top: 15vh;
+  
+  height: 75vh;
 }
 
 .profile-card form {
@@ -19,26 +26,32 @@
 }
 
 .profile-card h2 {
+  position: center;
   margin-bottom: 20px;
 }
 
 .profile-card input,
 .profile-card select {
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 5px;
+  margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 100%;
+  
 }
 
 .profile-card button {
   padding: 10px;
   border: none;
   background-color: #007bff;
+  position: absolute;
+  top: 90%;
+  right: 25%;
+  left: 22%;
   color: white;
   cursor: pointer;
   border-radius: 5px;
-  width: 100%;
+  width: 60%;
   margin-top: 10px;
 }
 

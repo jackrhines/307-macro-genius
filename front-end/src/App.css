@@ -116,7 +116,7 @@ a:active {
   font-family: "Inter", Helvetica;
   position: absolute;
 
-  left: 85%;
+  left: 74%;
   bottom: 10%;
   background-color: #1ca655;
   color: #ffffff;
@@ -135,7 +135,7 @@ a:active {
 .home-navigate-menu {
   font-family: "Inter", Helvetica;
   position: absolute;
-  left: 70.8%;
+  left: 35%;
   bottom: 10%;
   background-color: #1ca655;
   color: #ffffff;
@@ -154,7 +154,7 @@ a:active {
 .login-navigate-menu {
   font-family: "Inter", Helvetica;
   position: absolute;
-  left: 78%;
+  left: 83%;
   bottom: 10%;
   background-color: #1ca655;
   color: #ffffff;
@@ -173,7 +173,7 @@ a:active {
 .search-navigate-menu {
   font-family: "Inter", Helvetica;
   position: absolute;
-  left: 63%;
+  left: 66%;
   bottom: 10%;
   background-color: #1ca655;
   color: #ffffff;
@@ -192,7 +192,7 @@ a:active {
 .signout-navigate-menu {
   font-family: "Inter", Helvetica;
   position: absolute;
-  left: 54.1%;
+  left: 90%;
   bottom: 10%;
   background-color: #1ca655;
   color: #ffffff;
@@ -208,10 +208,48 @@ a:active {
   background-color: #0f5f30;
 }
 
+.food-navigate-menu {
+    font-family: "Inter", Helvetica;
+    position: absolute;
+    left: 51%;
+    bottom: 10%;
+    background-color: #1ca655;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+.food-navigate-menu:hover {
+font-family: "Inter", Helvetica;
+background-color: #0f5f30;
+}
+
+.create-navigate-menu {
+font-family: "Inter", Helvetica;
+position: absolute;
+left: 58%;
+bottom: 10%;
+background-color: #1ca655;
+color: #ffffff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.create-navigate-menu:hover {
+font-family: "Inter", Helvetica;
+background-color: #0f5f30;
+}
+
 .profile-navigate-menu {
   font-family: "Inter", Helvetica;
   position: absolute;
-  left: 46.3%;
+  left: 43%;
   bottom: 10%;
   background-color: #1ca655;
   color: #ffffff;
