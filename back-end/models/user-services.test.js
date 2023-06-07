@@ -1,4 +1,15 @@
 const userServices = require("./user-services");
+const { connection } = require("mongoose");
+
+beforeAll((done) => {
+  done();
+});
+
+afterAll((done) => {
+  // Closing the DB connection allows Jest to exit successfully.
+  connection.close();
+  done();
+});
 
 test("test findUserByUserName", async () => {
   const result = await userServices.findUserByUserName("alimm");
