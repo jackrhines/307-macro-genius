@@ -36,15 +36,22 @@ const App = () => {
                 <ul className="profile-navigate-menu">
                     <li><a href="/landingPage">Profile</a></li>
                 </ul>
+                <ul className="food-navigate-menu">
+                    <li><a href="/food">Food</a></li>
+                </ul>
                 <ul className="login-navigate-menu">
                     <li><a href="/login">Login</a></li>
                 </ul>
                 <ul className="search-navigate-menu">
                     <li><a href="/search">Search</a></li>
                 </ul>
+                <ul className="create-navigate-menu">
+                    <li><a href="/createprofile">Create</a></li>
+                </ul>
                 <ul className="signout-navigate-menu">
                     <li><a onClick={() => logout()}> Sign Out</a></li>
                 </ul>
+
             </div>
           <div className={`Img-wrapper ${currentPage === "/" ? "" : "hide-menu"}`}>
                     <image>

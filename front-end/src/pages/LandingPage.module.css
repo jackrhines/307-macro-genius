@@ -9,6 +9,10 @@
   border-radius: 50%;
   z-index: 2;
 }
+.progressBar {
+  position: absolute;
+  right: 10%;
+}
 
 .landingText label {
   position: absolute;
@@ -46,4 +50,9 @@
   display: flex;
   left: 50%;
   top: 40%;
+}
+
+.logfoods{
+  position: absolute;
+  right: 10%;
 }

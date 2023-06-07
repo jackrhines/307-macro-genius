@@ -66,7 +66,8 @@ const MainRoutes = () => {
             </ProtectedRoutes>
           }
         />
-        <Route path="/createprofile" element={<CreateProfile />} />
+        <Route path="/createprofile" element={<ProtectedRoutes>
+            <CreateProfile /> </ProtectedRoutes>} />
 
         <Route
           path="/search"
