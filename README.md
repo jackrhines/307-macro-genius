@@ -20,7 +20,7 @@ Last updated: tbd
 link: tbd
 
 Description:
-MacroGenius is a web application aimed to be used for tracking daily calorie intake. 
+MacroGenius is a web application aimed to be used for tracking daily calorie intake. [...] (to be added)
 
 
 
