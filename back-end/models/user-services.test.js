@@ -1,14 +1,14 @@
 const userServices = require("./user-services");
 
 beforeAll((done) => {
-    done();
-  });
-  
-  afterAll((done) => {
-    // Closing the DB connection allows Jest to exit successfully.
-    connection.close();
-    done();
-  });
+  done();
+});
+
+afterAll((done) => {
+  // Closing the DB connection allows Jest to exit successfully.
+  connection.close();
+  done();
+});
 
 test("test findUserByUserName", async () => {
   const result = await userServices.findUserByUserName("alimm");
