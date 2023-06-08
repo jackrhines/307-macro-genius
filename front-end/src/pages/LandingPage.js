@@ -14,7 +14,6 @@ const LandingPage = (props) => {
     current.getMonth() + 1
   }/${current.getDate()}/${current.getFullYear()}`;
   const curUser = cookies.get("USER");
-  const id = cookies.get("PROFILE");
 
   const [calories, setCalories] = useState(0);
   const [profile, setProfile] = useState({
@@ -40,7 +39,7 @@ const LandingPage = (props) => {
       }
     })
 
-    fetchProfile(id).then((result) => {
+    fetchProfile(curUser).then((result) => {
       if (result)
         setProfile(result)
     });

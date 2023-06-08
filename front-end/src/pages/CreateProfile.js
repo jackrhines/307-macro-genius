@@ -22,9 +22,9 @@ const CreateProfile = () => {
   const handleSubmit = event => {
     
     event.preventDefault();
-    cookies.set("PROFILE", profId, {path : "/"})
+    const curUser = cookies.get("USER");
     axios.post('https://macrogenius.azurewebsites.net/createprofile', {
-        id: profId,
+        id: curUser,
         firstName: firstName,
         lastName: lastName,
         age: age,
