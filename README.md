@@ -48,20 +48,20 @@ Generated on June 8, 2023
 
 Development environment set up:
 On a local folder,
-> git init
-> git remote add origin https://github.com/jackrhines/307-macro-genius
-> git pull origin main
+$> git init
+$> git remote add origin https://github.com/jackrhines/307-macro-genius
+$> git pull origin main
 
 In working local folder,
-> npm install
+$> npm install
 
 to run backend,
-> cd ./back-end
-> node backend_with_db.js
+$> cd ./back-end
+$> node backend_with_db.js
 
 to run frontend,
-> cd ./front-end
-> npm start
+$> cd ./front-end
+$> npm start
 
 
 
