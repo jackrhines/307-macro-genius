@@ -2,6 +2,9 @@
 [![back-end](https://github.com/jackrhines/307-macro-genius/actions/workflows/back-end.yml/badge.svg)](https://github.com/jackrhines/307-macro-genius/actions/workflows/back-end.yml)
 [![front-end](https://github.com/jackrhines/307-macro-genius/actions/workflows/front-end.yml/badge.svg)](https://github.com/jackrhines/307-macro-genius/actions/workflows/front-end.yml)
 
+Deployed website:
+https://kind-stone-0b40c121e.3.azurestaticapps.net/ 
+
 Project contribution from:
 Jack, Andy, Ahren, Aryan, Nick
 
