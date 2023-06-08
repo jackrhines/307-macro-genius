@@ -9,6 +9,13 @@ on:
       - main
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: ./back-end
+    
+env:
+  AZURE_WEBAPP_PACKAGE_PATH: ./back-end
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -59,4 +66,4 @@ jobs:
           app-name: 'MacroGenius'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_020DD6DA78764B24A1F633F01A71EA8A }}
-          package: .
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
