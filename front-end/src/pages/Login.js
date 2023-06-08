@@ -15,7 +15,7 @@ const Login = (props) => {
     // set configurations for the API call here
     const configuration = {
       method: "get",
-      url: "http://localhost:8000/free-endpoint",
+      url: "https://macrogenius.azurewebsites.net/free-endpoint",
     };
     axios(configuration)
       .then((result) => {
@@ -40,7 +40,7 @@ const Login = (props) => {
     event.preventDefault();
     const configuration = {
       method: "post",
-      url: "http://localhost:8000/login",
+      url: "https://macrogenius.azurewebsites.net/login",
       data: {
         username,
         password,

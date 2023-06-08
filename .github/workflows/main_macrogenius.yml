@@ -39,6 +39,8 @@ jobs:
           MONGO_USER: ${{ secrets.MONGO_USER }}
           MONGO_PWD: ${{ secrets.MONGO_PWD }}
           MONGO_CLUSTER: ${{ secrets.MONGO_CLUSTER }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2

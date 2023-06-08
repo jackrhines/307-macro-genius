@@ -31,7 +31,7 @@ function Food() {
       const end = endOfDay(date);
 
       const response = await axios.get(
-        "http://localhost:8000/foods?user=" +
+        "https://macrogenius.azurewebsites.net/foods?user=" +
           user +
           "&startDate=" +
           start.toString() +
@@ -48,7 +48,7 @@ function Food() {
 
   async function makePostCall(food) {
     try {
-      return await axios.post("http://localhost:8000/foods", food);
+      return await axios.post("https://macrogenius.azurewebsites.net/foods", food);
     } catch (error) {
       console.log(error);
       return false;
@@ -63,7 +63,7 @@ function Food() {
 
   async function makeDeleteCall(id) {
     try {
-      return await axios.delete("http://localhost:8000/foods/" + id);
+      return await axios.delete("https://macrogenius.azurewebsites.net/foods/" + id);
     } catch (error) {
       console.log(error);
       return false;

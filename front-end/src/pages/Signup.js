@@ -33,7 +33,7 @@ const SignUp = (props) => {
       // Passwords match, proceed with sign-up logic
       const configuration = {
         method: "post",
-        url: "http://localhost:8000/register",
+        url: "https://macrogenius.azurewebsites.net/register",
         data: {
           username,
           password,

@@ -52,7 +52,7 @@ const LandingPage = (props) => {
       const end = endOfDay(Date.now());
 
       const response = await axios.get(
-        "http://localhost:8000/foods?user=" +
+        "https://macrogenius.azurewebsites.net/foods?user=" +
           user +
           "&startDate=" +
           start.toString() +
@@ -69,7 +69,7 @@ const LandingPage = (props) => {
 
   async function fetchProfile(id) {
     try {
-      const response = await axios.get('http://localhost:8000/userprofile/' + id)
+      const response = await axios.get('https://macrogenius.azurewebsites.net/userprofile/' + id)
       console.log(response)
       return response.data
     } catch (error) {

@@ -8,7 +8,7 @@ const Search = () => {
 
   async function makePostCall(msg) {
     try {
-      return await axios.post("http://localhost:8000/search", msg);
+      return await axios.post("https://macrogenius.azurewebsites.net/search", msg);
     } catch (error) {
       console.log(error);
       return false;
