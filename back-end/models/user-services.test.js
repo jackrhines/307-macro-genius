@@ -17,15 +17,15 @@ test("test findUserByUserName", async () => {
 });
 
 test("test add user", async () => {
-  user = { username: "jestTest", password: "123" };
-  const add = await userServices.addUser(user);
+  const user = { username: "jestTest", password: "123" };
+  await userServices.addUser(user);
   const result = await userServices.findUserByUserName("jestTest");
 
   expect(result[0].username).toBe("jestTest");
 });
 //add a delete for user-services for testing add user.
 test("test add user -- error", async () => {
-  user = { username: "jestTest", password: "123" };
+  const user = { username: "jestTest", password: "123" };
   const result = await userServices.addUser(user);
 
   expect(result).toBe(false);
@@ -33,7 +33,7 @@ test("test add user -- error", async () => {
 
 test("test delete user by username", async () => {
   const result = await userServices.findUserByUserName("jestTest");
-  const del = await userServices.deleteUserByUsername(result[0]._id);
+  await userServices.deleteUserByUsername(result[0]._id);
 
   const after_result = await userServices.findUserByUserName("jestTest");
   expect(after_result).toEqual([]);

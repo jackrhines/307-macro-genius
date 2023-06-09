@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const userServices = require("./models/user-services");
+require("./models/user-services");
 const foodServices = require("./models/food-services");
 const User = require("./models/user");
 const bcrypt = require("bcrypt");
@@ -8,7 +8,6 @@ const jwt = require("jsonwebtoken");
 const auth = require("./auth");
 const nutriSearch = require("./Utils/nutriSearch");
 const UserProfile = require("./models/profile");
-const { v4: uuidv4 } = require("uuid");
 
 const app = express();
 const port = 8000;

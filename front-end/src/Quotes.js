@@ -1,6 +1,6 @@
 import React from "react";
 
-const quotes = {
+const Quotes = {
   quotes: [
     {
       quote:

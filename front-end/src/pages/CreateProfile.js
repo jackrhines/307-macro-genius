@@ -3,10 +3,8 @@ import './CreateProfile.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'universal-cookie';
-const { v4: uuidv4 } = require("uuid");
 
 const cookies = new Cookies();
-const profId = uuidv4();
 
 const CreateProfile = () => {
   const [firstName, setFirstName] = useState("");
